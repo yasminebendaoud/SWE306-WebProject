@@ -11,8 +11,8 @@ public class UserDAO {
 
     public boolean registerUser(User user) {
 
-    	String sql = "INSERT INTO users (username, email, password, role) VALUES (?, ?, ?, ?)";
-
+    	String sql = "INSERT INTO users (username, email, password, phone_number, role) VALUES (?, ?, ?, ?, ?)";
+    	
         try {
 
             Connection connection = DBConnection.getConnection();
@@ -22,7 +22,8 @@ public class UserDAO {
             statement.setString(1, user.getUsername());
             statement.setString(2, user.getEmail());
             statement.setString(3, user.getPassword());
-            statement.setString(4, user.getRole());
+            statement.setString(4, user.getPhoneNumber());
+            statement.setString(5, user.getRole());
 
             int rowsInserted = statement.executeUpdate();
             

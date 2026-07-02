@@ -28,12 +28,17 @@ public class RegisterServlet extends HttpServlet {
 		String username = request.getParameter("username");
 		String email = request.getParameter("email");
 		String password = request.getParameter("password");
+		String phoneNumber = request.getParameter("phoneNumber");
 		
 		if (username == null || username.trim().isEmpty()
 		        || email == null || email.trim().isEmpty()
 		        || password == null || password.trim().isEmpty()) {
 
-		    response.getWriter().println("Please fill in all required fields.");
+		    request.setAttribute("error", "Please fill in all required fields.");
+
+		    request.getRequestDispatcher("/jsp/register.jsp")
+		           .forward(request, response);
+
 		    return;
 		}
 
@@ -41,21 +46,38 @@ public class RegisterServlet extends HttpServlet {
 		user.setUsername(username);
 		user.setEmail(email);
 		user.setPassword(password);
+		user.setPhoneNumber(phoneNumber);
 		user.setRole("customer");
+		
+		request.setAttribute("username", username);
+		request.setAttribute("email", email);
+		request.setAttribute("phoneNumber",
+		        request.getParameter("phoneNumber"));
 
 		UserDAO dao = new UserDAO();
+		
 
 		if (dao.emailExists(email)) {
-			response.getWriter().println("Email already exists!");
+			request.setAttribute("error", "Email already exists.");
+
+			request.getRequestDispatcher("/jsp/register.jsp")
+			       .forward(request, response);
 		} else {
 
 			if (dao.registerUser(user)) {
 
-			    response.sendRedirect(request.getContextPath() + "/jsp/login.jsp");
+			    request.setAttribute("success",
+			            "Registration successful! Please sign in.");
+
+			    request.getRequestDispatcher("/jsp/login.jsp")
+			           .forward(request, response);
 
 			} else {
 
-			    response.getWriter().println("Registration Failed!");
+			    request.setAttribute("error", "Registration failed. Please try again.");
+
+			    request.getRequestDispatcher("/jsp/register.jsp")
+			           .forward(request, response);
 
 			}
 

@@ -60,6 +60,19 @@ href="${pageContext.request.contextPath}/css/auth.css">
 			
 			</div>
 			
+			<%
+			String error = (String) request.getAttribute("error");
+			if (error != null) {
+			%>
+			
+			<div class="alert alert-danger">
+			    <%= error %>
+			</div>
+			
+			<%
+			}
+			%>
+			
 			<form
 			    class="register-form"
 			    method="post"
@@ -72,7 +85,9 @@ href="${pageContext.request.contextPath}/css/auth.css">
 			            class="form-control"
 			            id="username"
 			            name="username"
-			            placeholder="Enter your username">
+			            placeholder="Enter your username"
+			            value="${username}"
+			            required>
 			    </div>
 			
 			    <div class="mb-3">
@@ -82,7 +97,9 @@ href="${pageContext.request.contextPath}/css/auth.css">
 			            class="form-control"
 			            id="email"
 			            name="email"
-			            placeholder="Enter your email">
+			            placeholder="Enter your email"
+			            value="${email}"
+			            required>
 			    </div>
 			
 			    <div class="mb-3">
@@ -92,7 +109,9 @@ href="${pageContext.request.contextPath}/css/auth.css">
 			            class="form-control"
 			            id="phoneNumber"
 			            name="phoneNumber"
-			            placeholder="+60 12-345 6789">
+			            placeholder="+60 12-345 6789"
+			            value="${phoneNumber}"
+			            required>
 			    </div>
 			
 			    <div class="mb-3">
@@ -102,7 +121,8 @@ href="${pageContext.request.contextPath}/css/auth.css">
 			            class="form-control"
 			            id="password"
 			            name="password"
-			            placeholder="Create a password">
+			            placeholder="Create a password"
+			            required>
 			    </div>
 			
 			    <div class="mb-4">
@@ -112,7 +132,8 @@ href="${pageContext.request.contextPath}/css/auth.css">
 			            class="form-control"
 			            id="confirmPassword"
 			            name="confirmPassword"
-			            placeholder="Confirm your password">
+			            placeholder="Confirm your password"
+			            required>
 			    </div>
 			
 			    <button type="submit" class="btn btn-dark w-100">
@@ -121,7 +142,10 @@ href="${pageContext.request.contextPath}/css/auth.css">
 			
 			    <div class="text-center mt-4">
 			        Already have an account?
-			        <a href="login.jsp">Sign In</a>
+			        <a href="${pageContext.request.contextPath}/jsp/login.jsp"
+					   class="login-link">
+					    Sign In
+					</a>
 			    </div>
 			
 			</form>
@@ -131,6 +155,27 @@ href="${pageContext.request.contextPath}/css/auth.css">
 	</div>
 
 </div>
+
+<script>
+
+const registerForm = document.querySelector(".register-form");
+
+registerForm.addEventListener("submit", function(event) {
+
+    const password = document.getElementById("password").value;
+    const confirmPassword = document.getElementById("confirmPassword").value;
+
+    if (password !== confirmPassword) {
+
+        event.preventDefault();
+
+        alert("Passwords do not match.");
+
+    }
+
+});
+
+</script>
 
 </body>
 

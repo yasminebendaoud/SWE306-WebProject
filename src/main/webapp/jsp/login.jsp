@@ -60,6 +60,30 @@ href="${pageContext.request.contextPath}/css/auth.css">
 			
 			</div>
 			
+			<%
+			String success = (String) request.getAttribute("success");
+			if (success != null) {
+			%>
+			
+			<div class="alert alert-success">
+			    <%= success %>
+			</div>
+			
+			<%
+			}
+			
+			String error = (String) request.getAttribute("error");
+			if (error != null) {
+			%>
+			
+			<div class="alert alert-danger">
+			    <%= error %>
+			</div>
+			
+			<%
+			}
+			%>
+
 			<form
 			    class="register-form"
 			    method="post"
@@ -72,7 +96,9 @@ href="${pageContext.request.contextPath}/css/auth.css">
 				        class="form-control"
 				        id="login"
 				        name="login"
-				        placeholder="Enter your username or email">
+				        placeholder="Enter your username or email"
+				        value="${login}"
+				        required>
 				</div>
 			
 			    <div class="mb-3">
@@ -82,7 +108,8 @@ href="${pageContext.request.contextPath}/css/auth.css">
 			            class="form-control"
 			            id="password"
 			            name="password"
-			            placeholder="Enter your password">
+			            placeholder="Enter your password"
+			            required>
 			    </div>
 			
 			
@@ -92,7 +119,10 @@ href="${pageContext.request.contextPath}/css/auth.css">
 			
 			    <div class="text-center mt-4">
 			        Don't have an account?
-					<a href="register.jsp" class="login-link">Register</a>
+					<a href="${pageContext.request.contextPath}/jsp/register.jsp"
+					   class="login-link">
+					    Register
+					</a>
 			    </div>
 			
 			</form>

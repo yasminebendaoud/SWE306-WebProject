@@ -30,11 +30,16 @@ public class LoginServlet extends HttpServlet {
 
         String login = request.getParameter("login");
         String password = request.getParameter("password");
+        request.setAttribute("login", login);
 
         if (login == null || login.trim().isEmpty()
                 || password == null || password.trim().isEmpty()) {
 
-            response.getWriter().println("Please fill in all fields.");
+            request.setAttribute("error", "Please fill in all fields.");
+
+            request.getRequestDispatcher("/jsp/login.jsp")
+                   .forward(request, response);
+
             return;
         }
 
@@ -52,7 +57,11 @@ public class LoginServlet extends HttpServlet {
 
         } else {
 
-            response.getWriter().println("Invalid username/email or password.");
+            request.setAttribute("error",
+                    "Invalid username or password.");
+
+            request.getRequestDispatcher("/jsp/login.jsp")
+                   .forward(request, response);
 
         }
 

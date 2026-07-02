@@ -50,9 +50,13 @@ public class RegisterServlet extends HttpServlet {
 		} else {
 
 			if (dao.registerUser(user)) {
-				response.getWriter().println("Registration Successful!");
+
+			    response.sendRedirect(request.getContextPath() + "/jsp/login.jsp");
+
 			} else {
-				response.getWriter().println("Registration Failed!");
+
+			    response.getWriter().println("Registration Failed!");
+
 			}
 
 		}

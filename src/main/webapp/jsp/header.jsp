@@ -12,19 +12,22 @@
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- Link to your new external CSS style sheet file path -->
-    <link rel="stylesheet" href="../css/style.css">
+    <!-- Bulletproof link to your local custom styles using Context Path -->
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
 </head>
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-editorial sticky-top">
     <div class="container text-center">
         <div class="w-100 d-flex justify-content-between align-items-center">
-            <a class="nav-link" href="faq.jsp#home">Home</a>
-            <a class="nav-link" href="menu.jsp">Menu</a>
+            <!-- All links route safely from the root context + the jsp directory -->
+            <a class="nav-link" href="${pageContext.request.contextPath}/jsp/index.jsp#home">Home</a>
+            <a class="nav-link" href="${pageContext.request.contextPath}/jsp/menu.jsp">Menu</a>
+            
             <span class="d-none d-md-inline text-white font-sans fw-bold tracking-widest text-uppercase" style="font-size: 0.95rem;">Luna e Vino</span>
-            <a class="nav-link" href="faq.jsp#faq">Coming Soon</a>
-            <a class="nav-link" href="faq.jsp#contact">Contact</a>
+            
+            <a class="nav-link" href="${pageContext.request.contextPath}/jsp/faq.jsp#faq">Coming Soon</a>
+            <a class="nav-link" href="${pageContext.request.contextPath}/jsp/faq.jsp#contact">Contact</a>
         </div>
     </div>
 </nav>

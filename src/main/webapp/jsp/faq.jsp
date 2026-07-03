@@ -139,7 +139,7 @@
                 <div class="row g-3">
                     <div class="col-md-6">
                         <label class="form-label font-sans text-muted text-uppercase" style="font-size:0.65rem;">Full Name</label>
-                        <input type="text" id="clientName" class="form-control rounded-0 border-dark bg-white" placeholder="e.g. Katherine">
+                        <input type="text" id="clientName" class="form-control rounded-0 border-dark bg-white" placeholder="e.g. Madeline">
                         <div class="text-brand-red font-sans small mt-1 d-none" id="nameError">Please enter your name.</div>
                     </div>
                     <div class="col-md-6">

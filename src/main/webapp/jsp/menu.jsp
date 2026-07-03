@@ -22,7 +22,7 @@
                         <div class="text-brand-red fw-bold">RM 135.00</div>
                     </div>
                     <h3 class="h4 fw-normal text-dark mb-3">Gastronomic Tagliolini Journey</h3>
-                    <ul class="text-muted small ps-3 mb-4" style="line-height: 1.7; font-family: sans-serif; list-serif: none;">
+                    <ul class="text-muted small ps-3 mb-4" style="line-height: 1.7; font-family: sans-serif; ">
                         <li>- Hand-cut artisanal pasta strings</li>
                         <li>- Shaved Umbrian winter truffles</li>
                         <li>- Cultured alpine butter emulsification</li>

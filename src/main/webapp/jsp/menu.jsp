@@ -1,83 +1,159 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <jsp:include page="header.jsp" />
 
-<div class="container-fluid px-0 border-bottom border-dark">
+<style>
+    .font-playfair-italic {
+        font-family: 'Playfair Display', 'Playfair', serif;
+        font-style: italic;
+    }
+    .bg-menu-textured {
+        background-color: #F8F8F8;
+    }
+    /* Simple centered frame for the images */
+    .menu-centered-box {
+        width: 100%;
+        max-width: 320px;
+        height: 320px;
+        margin: 0 auto 1.5rem auto;
+        overflow: hidden;
+    }
+    .menu-centered-box img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    /* Elegant centered horizontal line between food items */
+    .menu-divider {
+        border-top: 1px solid #333333;
+        width: 100%;
+        max-width: 400px;
+        margin: 4rem auto;
+    }
+    /* Ensures clean text line height when centered */
+    .menu-text-block {
+        max-width: 550px;
+        margin: 0 auto;
+        line-height: 1.6;
+    }
+    /* FORCE all headings to center */
+    h2,
+    .menu-text-block h2 {
+        text-align: center !important;
+        width: 100%;
+        display: block;
+    }
+</style>
+
+<div class="container-fluid bg-menu-textured py-5">
     <div class="row g-0">
-        
-        <!-- Left Side Picture Frame Panel Wrapper -->
-        <div class="col-md-6 d-none d-md-block position-relative grid-border-right menu-image-pane">
-            <div class="sticky-top menu-sticky-image">
-                <img src="https://images.unsplash.com/photo-1534111762495-20698442d574?q=80&w=800" 
-                     class="w-100 h-100 object-fit-cover menu-image-render" alt="Fine Dining Experience">
-            </div>
-        </div>
-        
-        <!-- Right Side Product Items Selection Streams -->
-        <div class="col-md-6 bg-white d-flex flex-column justify-content-between">
-            <div>
-                
-                <div class="p-4 p-lg-5 grid-border-bottom">
-                    <div class="d-flex justify-content-between font-sans text-muted mb-2" style="font-size: 0.7rem;">
-                        <div>IL PRIMO</div>
-                        <div class="text-brand-red fw-bold">RM 135.00</div>
-                    </div>
-                    <h3 class="h4 fw-normal text-dark mb-3">Gastronomic Tagliolini Journey</h3>
-                    <ul class="text-muted small ps-3 mb-4 list-unstyled" style="line-height: 1.7; font-family: sans-serif;">
-                        <li>- Hand-cut artisanal pasta strings</li>
-                        <li>- Shaved Umbrian winter truffles</li>
-                        <li>- Cultured alpine butter emulsification</li>
-                    </ul>
-                    
-                    <div class="row g-2 align-items-center">
-                        <div class="col-7">
-                            <select class="form-select form-select-sm border-dark rounded-0 font-sans">
-                                <option selected>Standard Profile</option>
-                                <option>Double Truffle Shaving (+RM 60)</option>
-                            </select>
-                        </div>
-                        <div class="col-5">
-                            <button class="btn btn-dark btn-sm rounded-0 w-100 font-sans bg-black text-uppercase" style="font-size: 0.65rem; padding: 8px 0;">
-                                Add to Bag
-                            </button>
-                        </div>
-                    </div>
+        <div class="col-12 col-md-8 col-lg-6 mx-auto">
+
+            <!-- Item 1: Gastronomic Tagliolini Journey -->
+            <div class="py-2">
+                <h2 class="font-playfair-italic fw-normal text-dark mb-4" style="font-size: 2.6rem;">
+                    Gastronomic Tagliolini Journey
+                </h2>
+
+                <div class="menu-centered-box">
+                    <img src="https://images.unsplash.com/photo-1534111762495-20698442d574?q=80&w=800" alt="Gastronomic Tagliolini Journey">
                 </div>
 
-                <div class="p-4 p-lg-5 grid-border-bottom">
-                    <div class="d-flex justify-content-between font-sans text-muted mb-2" style="font-size: 0.7rem;">
-                        <div>IL SECONDO</div>
-                        <div class="text-brand-red fw-bold">RM 185.00</div>
-                    </div>
-                    <h3 class="h4 fw-normal text-dark mb-3">The Magic of Wagyu Crudo</h3>
-                    <ul class="text-muted small ps-3 mb-4 list-unstyled" style="line-height: 1.7; font-family: sans-serif;">
-                        <li>- Smoked Miyazaki A5 beef ribboning</li>
-                        <li>- Wild caper berry preserves</li>
-                        <li>- Whipped yolk gel and crisp flatbread</li>
-                    </ul>
-                    <div class="row g-2 align-items-center">
-                        <div class="col-7">
-                            <select class="form-select form-select-sm border-dark rounded-0 font-sans">
-                                <option selected>Standard Profile</option>
-                                <option>With Wine Pairing (+RM 45)</option>
-                            </select>
-                        </div>
-                        <div class="col-5">
-                            <button class="btn btn-dark btn-sm rounded-0 w-100 font-sans bg-black text-uppercase" style="font-size: 0.65rem; padding: 8px 0;">
-                                Add to Bag
-                            </button>
-                        </div>
-                    </div>
+                <div class="menu-text-block">
+                    <h2 class="font-playfair-italic text-muted fw-normal mb-2" style="font-size: 1.25rem;">
+                        Something about how the meal makes you feel
+                    </h2>
+
+                    <h2 class="font-playfair-italic text-dark fw-normal mb-3" style="font-size: 1.15rem; letter-spacing: 0.3px;">
+                        Hand-cut artisanal pasta strings • Shaved Umbrian winter truffles • Cultured alpine butter emulsification
+                    </h2>
+
+                    <h2 class="font-playfair-italic text-muted fw-normal" style="font-size: 1.2rem; letter-spacing: 0.5px;">
+                        RM 135.00
+                    </h2>
                 </div>
-                
             </div>
-            
-            <div class="p-4 p-lg-5 d-flex justify-content-between align-items-center bg-light">
-                <span class="font-script text-dark display-6">Luna e Vino</span>
-                <span class="border border-dark rounded-circle p-2 d-inline-flex align-items-center justify-content-center michelin-token-boundary">
-                    <i class="fa-solid fa-star text-brand-red small"></i>
-                </span>
+
+            <div class="menu-divider"></div>
+
+            <!-- Item 2: Oyster Meal -->
+            <div class="py-2">
+                <h2 class="font-playfair-italic fw-normal text-dark mb-4" style="font-size: 2.6rem;">
+                    Oyster Meal
+                </h2>
+
+                <div class="menu-centered-box">
+                    <img src="https://images.unsplash.com/photo-1553618551-fba689030290?q=80&w=800" alt="Oyster Meal">
+                </div>
+
+                <div class="menu-text-block">
+                    <h2 class="font-playfair-italic text-muted fw-normal mb-2" style="font-size: 1.25rem;">
+                        Something about how the meal makes you feel
+                    </h2>
+
+                    <h2 class="font-playfair-italic text-dark fw-normal mb-3" style="font-size: 1.15rem; letter-spacing: 0.3px;">
+                        Freshly shucked premium oysters • House cocktail reduction • Zesty lemon accents • Grated horseradish
+                    </h2>
+
+                    <h2 class="font-playfair-italic text-muted fw-normal" style="font-size: 1.2rem; letter-spacing: 0.5px;">
+                        RM 160.00
+                    </h2>
+                </div>
             </div>
-            
+
+            <div class="menu-divider"></div>
+
+            <!-- Item 3: Lobster Bisque -->
+            <div class="py-2">
+                <h2 class="font-playfair-italic fw-normal text-dark mb-4" style="font-size: 2.6rem;">
+                    Lobster Bisque
+                </h2>
+
+                <div class="menu-centered-box">
+                    <img src="https://images.unsplash.com/photo-1547592165-e1d17fed6005?q=80&w=800" alt="Lobster Bisque">
+                </div>
+
+                <div class="menu-text-block">
+                    <h2 class="font-playfair-italic text-muted fw-normal mb-2" style="font-size: 1.25rem;">
+                        Something about how the meal makes you feel
+                    </h2>
+
+                    <h2 class="font-playfair-italic text-dark fw-normal mb-3" style="font-size: 1.15rem; letter-spacing: 0.3px;">
+                        Rich crustacean cream reduction • Butter-poached lobster claw • Saffron emulsion • Snipped chives
+                    </h2>
+
+                    <h2 class="font-playfair-italic text-muted fw-normal" style="font-size: 1.2rem; letter-spacing: 0.5px;">
+                        RM 145.00
+                    </h2>
+                </div>
+            </div>
+
+            <div class="menu-divider"></div>
+
+            <!-- Item 4: The Magic of Wagyu Crudo -->
+            <div class="py-2">
+                <h2 class="font-playfair-italic fw-normal text-dark mb-4" style="font-size: 2.6rem;">
+                    The Magic of Wagyu Crudo
+                </h2>
+
+                <div class="menu-centered-box">
+                    <img src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=800" alt="The Magic of Wagyu Crudo">
+                </div>
+
+                <div class="menu-text-block">
+                    <h2 class="font-playfair-italic text-muted fw-normal mb-2" style="font-size: 1.25rem;">
+                        Something about how the meal makes you feel
+                    </h2>
+
+                    <h2 class="font-playfair-italic text-dark fw-normal mb-3" style="font-size: 1.15rem; letter-spacing: 0.3px;">
+                        Smoked Miyazaki A5 beef ribboning • Wild caper berry preserves • Whipped yolk gel and crisp flatbread
+                    </h2>
+
+                    <h2 class="font-playfair-italic text-muted fw-normal" style="font-size: 1.2rem; letter-spacing: 0.5px;">
+                        RM 185.00
+                    </h2>
+                </div>
+            </div>
+
         </div>
     </div>
 </div>

@@ -1,4 +1,3 @@
-<!-- Structural Minimalistic Footer Blocks -->
 <footer class="py-5 bg-black text-white">
     <div class="container">
         <div class="row g-4 align-items-center font-sans">

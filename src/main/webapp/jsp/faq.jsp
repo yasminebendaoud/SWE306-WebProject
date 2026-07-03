@@ -1,8 +1,8 @@
 <jsp:include page="header.jsp" />
 
-
-<!-- SECTION 1: HERO & LANDING (INDEX HERO)    -->
-
+<!-- ========================================== -->
+<!-- SECTION 1: HERO & LANDING                  -->
+<!-- ========================================== -->
 <div class="container-fluid grid-border-bottom text-center py-4 bg-white">
     <p class="mb-0 small text-muted font-sans text-uppercase tracking-widest">
         Ristorante <span class="text-brand-red fw-bold">"Luna e Vino"</span> is a real piece of Italy in the heart of the city
@@ -12,13 +12,10 @@
 <header class="container my-5 py-3 position-relative" id="home">
     <div class="row justify-content-center align-items-center">
         <div class="col-10 col-sm-8 col-md-4 position-relative text-center">
-            <!-- Layered Script Typography -->
-            <h1 class="position-absolute w-100 font-script text-brand-red display-1 text-nowrap start-50 translate-middle-x" 
-                style="font-size: clamp(5rem, 12vw, 9rem); top: 35%; z-index: 2; pointer-events: none; letter-spacing: -2px;">
+            <h1 class="position-absolute w-100 font-script text-brand-red display-1 text-nowrap start-50 translate-middle-x hero-script-heading">
                 Luna e Vino
             </h1>
-            <!-- Centered Image Frame -->
-            <div class="position-relative" style="z-index: 1; padding: 0 10px;">
+            <div class="position-relative hero-image-wrapper">
                 <img src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=600" 
                      class="img-fluid border border-dark" alt="Luna e Vino Presentation">
             </div>
@@ -32,9 +29,9 @@
     </div>
 </header>
 
-
+<!-- ========================================== -->
 <!-- SECTION 2: ABOUT US (THE PHILOSOPHY)       -->
-
+<!-- ========================================== -->
 <div class="container-fluid grid-border-bottom text-center py-5 bg-white mt-5" id="about">
     <span class="text-uppercase text-brand-red font-sans fw-bold tracking-widest d-block mb-2">La Nostra Storia</span>
     <h2 class="display-3 fw-normal text-dark">Radical Heritage</h2>
@@ -63,9 +60,9 @@
     </div>
 </div>
 
-
+<!-- ========================================== -->
 <!-- SECTION 3: FAQ (GUEST INQUIRIES)          -->
-
+<!-- ========================================== -->
 <div class="container-fluid grid-border-bottom text-center py-5 bg-white mt-5" id="faq">
     <span class="text-uppercase text-muted font-sans tracking-widest d-block mb-2">Informazioni</span>
     <h2 class="display-4 fw-normal text-dark">Guest Inquiries</h2>
@@ -107,9 +104,9 @@
     </div>
 </div>
 
-
+<!-- ========================================== -->
 <!-- SECTION 4: CONTACT INTERFACE              -->
-
+<!-- ========================================== -->
 <div class="container-fluid grid-border-bottom text-center py-5 bg-white mt-5" id="contact">
     <span class="text-uppercase text-brand-red font-sans fw-bold tracking-widest d-block mb-2">Contatti</span>
     <h2 class="display-4 fw-normal text-dark">Connect With the Estate</h2>
@@ -117,7 +114,7 @@
 
 <div class="container-fluid px-0">
     <div class="row g-0 border-bottom border-dark">
-        <div class="col-md-5 bg-white p-4 p-lg-5 grid-border-right d-flex flex-column justify-content-between" style="min-height: 60vh;">
+        <div class="col-md-5 bg-white p-4 p-lg-5 grid-border-right d-flex flex-column justify-content-between contact-sidebar-pane">
             <div>
                 <h3 class="font-script text-brand-red display-4 mb-3">Luna e Vino</h3>
                 <p class="text-muted small mb-5" style="font-family: sans-serif;">For exclusive corporate buyouts, press inquiries, or private chef staging requests, please reach out directly via our digital concierge desk lines.</p>
@@ -165,7 +162,7 @@
     </div>
 </div>
 
-<!-- Form Validator Script -->
+<!-- Form Validator Script Element -->
 <script>
 function validateContactForm() {
     let isValid = true;

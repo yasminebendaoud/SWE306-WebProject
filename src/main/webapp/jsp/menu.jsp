@@ -7,7 +7,7 @@
         <div class="col-md-6 d-none d-md-block position-relative grid-border-right" style="min-height: 85vh;">
             <div class="sticky-top" style="top: 60px; height: calc(85vh - 60px); width: 100%;">
                 <img src="https://images.unsplash.com/photo-1534111762495-20698442d574?q=80&w=800" 
-                     class="w-100 h-100 object-fit-cover" alt="Fine Dining Experience" style="filter: contrast(1.1) brightness(0.95);">
+                    class="w-100 h-100 object-fit-cover" alt="Fine Dining Experience" style="filter: contrast(1.1) brightness(0.95);">
             </div>
         </div>
         

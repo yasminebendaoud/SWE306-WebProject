@@ -51,10 +51,9 @@
 
 /* Menu Item Typography Layout */
 .menu-item-title {
-    font-family: sans-serif;
-    font-size: 1.15rem;
-    font-weight: 600;
-    letter-spacing: 0.5px;
+    font-size: 2.25rem; /* Enriched display sizing for script flow */
+    font-weight: normal;
+    line-height: 1.1;
 }
 .dietary-badge {
     font-family: sans-serif;
@@ -65,6 +64,25 @@
     border: 1px solid #dee2e6;
     color: #495057;
     padding: 2px 8px;
+    height: fit-content;
+}
+
+/* Left-aligned Photo Space Settings */
+.menu-image-placeholder {
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    background-color: #fdfdfd;
+    border: 1px solid #000000;
+}
+@media (max-width: 575.98px) {
+    .menu-image-placeholder {
+        width: 100px;
+        height: 100px;
+    }
+    .menu-item-title {
+        font-size: 1.85rem;
+    }
 }
 </style>
 
@@ -97,43 +115,58 @@
     </div>
     <div class="container my-5 py-3">
         <div class="row justify-content-center">
-            <div class="col-lg-8">
+            <div class="col-lg-9">
                 <!-- Item 1 -->
-                <div class="mb-5 pb-4 border-bottom border-light">
-                    <div class="d-flex flex-wrap justify-content-between align-items-baseline mb-2">
-                        <h3 class="menu-item-title text-dark mb-1">Carpaccio di Manzo</h3>
-                        <div class="d-flex gap-1">
-                            <span class="dietary-badge">Gluten-Free</span>
-                            <span class="dietary-badge">Nut-Free</span>
-                        </div>
+                <div class="d-flex gap-3 gap-md-4 mb-5 pb-4 border-bottom border-light">
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=300" class="menu-image-placeholder" alt="Carpaccio di Manzo">
                     </div>
-                    <p class="text-muted small mb-1"><em>Wagyu beef, Parmigiano-Reggiano, black truffle</em></p>
-                    <p class="text-secondary small" style="font-family: sans-serif; line-height: 1.6;">Paper-thin slices of seared Wagyu beef drizzled with a white truffle emulsion and topped with aged cheese shards.</p>
+                    <div class="flex-grow-1">
+                        <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-2">
+                            <h3 class="menu-item-title font-script text-brand-red mb-0">Carpaccio di Manzo</h3>
+                            <div class="d-flex gap-1">
+                                <span class="dietary-badge">Gluten-Free</span>
+                                <span class="dietary-badge">Nut-Free</span>
+                            </div>
+                        </div>
+                        <p class="text-muted small mb-2"><em>Wagyu beef, Parmigiano-Reggiano, black truffle</em></p>
+                        <p class="text-secondary small mb-0" style="font-family: sans-serif; line-height: 1.6;">Paper-thin slices of seared Wagyu beef drizzled with a white truffle emulsion and topped with aged cheese shards.</p>
+                    </div>
                 </div>
                 <!-- Item 2 -->
-                <div class="mb-5 pb-4 border-bottom border-light">
-                    <div class="d-flex flex-wrap justify-content-between align-items-baseline mb-2">
-                        <h3 class="menu-item-title text-dark mb-1">Fiori di Zucca Ripieni</h3>
-                        <div class="d-flex gap-1">
-                            <span class="dietary-badge">Vegetarian</span>
-                            <span class="dietary-badge">Nut-Free</span>
-                        </div>
+                <div class="d-flex gap-3 gap-md-4 mb-5 pb-4 border-bottom border-light">
+                    <div>
+                        <div class="menu-image-placeholder d-flex align-items-center justify-content-center text-muted small font-sans bg-light">No Photo</div>
                     </div>
-                    <p class="text-muted small mb-1"><em>Zucchini blossoms, buffalo ricotta, mint</em></p>
-                    <p class="text-secondary small" style="font-family: sans-serif; line-height: 1.6;">Delicate squash blossoms stuffed with whipped herbed ricotta, lightly tempura-fried, and served over a tomato coulis.</p>
+                    <div class="flex-grow-1">
+                        <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-2">
+                            <h3 class="menu-item-title font-script text-brand-red mb-0">Fiori di Zucca Ripieni</h3>
+                            <div class="d-flex gap-1">
+                                <span class="dietary-badge">Vegetarian</span>
+                                <span class="dietary-badge">Nut-Free</span>
+                            </div>
+                        </div>
+                        <p class="text-muted small mb-2"><em>Zucchini blossoms, buffalo ricotta, mint</em></p>
+                        <p class="text-secondary small mb-0" style="font-family: sans-serif; line-height: 1.6;">Delicate squash blossoms stuffed with whipped herbed ricotta, lightly tempura-fried, and served over a tomato coulis.</p>
+                    </div>
                 </div>
                 <!-- Item 3 -->
-                <div class="mb-5">
-                    <div class="d-flex flex-wrap justify-content-between align-items-baseline mb-2">
-                        <h3 class="menu-item-title text-dark mb-1">Polpo Scottato</h3>
-                        <div class="d-flex gap-1">
-                            <span class="dietary-badge">Gluten-Free</span>
-                            <span class="dietary-badge">Dairy-Free</span>
-                            <span class="dietary-badge">Nut-Free</span>
-                        </div>
+                <div class="d-flex gap-3 gap-md-4 mb-5">
+                    <div>
+                        <div class="menu-image-placeholder d-flex align-items-center justify-content-center text-muted small font-sans bg-light">No Photo</div>
                     </div>
-                    <p class="text-muted small mb-1"><em>Mediterranean octopus, purple potato, caper berries</em></p>
-                    <p class="text-secondary small" style="font-family: sans-serif; line-height: 1.6;">Charred octopus tentacle served over a vibrant purple potato purée, finished with a tangy caper and lemon oil.</p>
+                    <div class="flex-grow-1">
+                        <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-2">
+                            <h3 class="menu-item-title font-script text-brand-red mb-0">Polpo Scottato</h3>
+                            <div class="d-flex gap-1">
+                                <span class="dietary-badge">Gluten-Free</span>
+                                <span class="dietary-badge">Dairy-Free</span>
+                                <span class="dietary-badge">Nut-Free</span>
+                            </div>
+                        </div>
+                        <p class="text-muted small mb-2"><em>Mediterranean octopus, purple potato, caper berries</em></p>
+                        <p class="text-secondary small mb-0" style="font-family: sans-serif; line-height: 1.6;">Charred octopus tentacle served over a vibrant purple potato purée, finished with a tangy caper and lemon oil.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -150,41 +183,56 @@
     </div>
     <div class="container my-5 py-3">
         <div class="row justify-content-center">
-            <div class="col-lg-8">
+            <div class="col-lg-9">
                 <!-- Item 1 -->
-                <div class="mb-5 pb-4 border-bottom border-light">
-                    <div class="d-flex flex-wrap justify-content-between align-items-baseline mb-2">
-                        <h3 class="menu-item-title text-dark mb-1">Risotto all'Arancia e Gamberi</h3>
-                        <div class="d-flex gap-1">
-                            <span class="dietary-badge">Gluten-Free</span>
-                            <span class="dietary-badge">Nut-Free</span>
-                        </div>
+                <div class="d-flex gap-3 gap-md-4 mb-5 pb-4 border-bottom border-light">
+                    <div>
+                        <div class="menu-image-placeholder d-flex align-items-center justify-content-center text-muted small font-sans bg-light">No Photo</div>
                     </div>
-                    <p class="text-muted small mb-1"><em>Carnaroli rice, red prawns, Sicilian blood orange</em></p>
-                    <p class="text-secondary small" style="font-family: sans-serif; line-height: 1.6;">Creamy, slow-stirred risotto infused with citrus zest and topped with crudo-style marinated red prawns.</p>
+                    <div class="flex-grow-1">
+                        <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-2">
+                            <h3 class="menu-item-title font-script text-brand-red mb-0">Risotto all'Arancia e Gamberi</h3>
+                            <div class="d-flex gap-1">
+                                <span class="dietary-badge">Gluten-Free</span>
+                                <span class="dietary-badge">Nut-Free</span>
+                            </div>
+                        </div>
+                        <p class="text-muted small mb-2"><em>Carnaroli rice, red prawns, Sicilian blood orange</em></p>
+                        <p class="text-secondary small mb-0" style="font-family: sans-serif; line-height: 1.6;">Creamy, slow-stirred risotto infused with citrus zest and topped with crudo-style marinated red prawns.</p>
+                    </div>
                 </div>
                 <!-- Item 2 -->
-                <div class="mb-5 pb-4 border-bottom border-light">
-                    <div class="d-flex flex-wrap justify-content-between align-items-baseline mb-2">
-                        <h3 class="menu-item-title text-dark mb-1">Tortelli di Zucca</h3>
-                        <div class="d-flex gap-1">
-                            <span class="dietary-badge">Vegetarian</span>
-                        </div>
+                <div class="d-flex gap-3 gap-md-4 mb-5 pb-4 border-bottom border-light">
+                    <div>
+                        <div class="menu-image-placeholder d-flex align-items-center justify-content-center text-muted small font-sans bg-light">No Photo</div>
                     </div>
-                    <p class="text-muted small mb-1"><em>Mantuan pumpkin, amaretto crumbs, sage brown butter</em></p>
-                    <p class="text-secondary small" style="font-family: sans-serif; line-height: 1.6;">Handmade egg pasta parcels filled with sweet pumpkin purée, tossed in a fragrant, nutty sage butter.</p>
+                    <div class="flex-grow-1">
+                        <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-2">
+                            <h3 class="menu-item-title font-script text-brand-red mb-0">Tortelli di Zucca</h3>
+                            <div class="d-flex gap-1">
+                                <span class="dietary-badge">Vegetarian</span>
+                            </div>
+                        </div>
+                        <p class="text-muted small mb-2"><em>Mantuan pumpkin, amaretto crumbs, sage brown butter</em></p>
+                        <p class="text-secondary small mb-0" style="font-family: sans-serif; line-height: 1.6;">Handmade egg pasta parcels filled with sweet pumpkin purée, tossed in a fragrant, nutty sage butter.</p>
+                    </div>
                 </div>
                 <!-- Item 3 -->
-                <div class="mb-5">
-                    <div class="d-flex flex-wrap justify-content-between align-items-baseline mb-2">
-                        <h3 class="menu-item-title text-dark mb-1">Tagliolini al Tartufo Nero</h3>
-                        <div class="d-flex gap-1">
-                            <span class="dietary-badge">Vegetarian</span>
-                            <span class="dietary-badge">Nut-Free</span>
-                        </div>
+                <div class="d-flex gap-3 gap-md-4 mb-5">
+                    <div>
+                        <div class="menu-image-placeholder d-flex align-items-center justify-content-center text-muted small font-sans bg-light">No Photo</div>
                     </div>
-                    <p class="text-muted small mb-1"><em>House-made egg pasta, cultured butter, Umbrian black truffle</em></p>
-                    <p class="text-secondary small" style="font-family: sans-serif; line-height: 1.6;">Fine ribbons of delicate egg pasta glossy with rich mountain butter and showered with freshly shaved black truffles.</p>
+                    <div class="flex-grow-1">
+                        <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-2">
+                            <h3 class="menu-item-title font-script text-brand-red mb-0">Tagliolini al Tartufo Nero</h3>
+                            <div class="d-flex gap-1">
+                                <span class="dietary-badge">Vegetarian</span>
+                                <span class="dietary-badge">Nut-Free</span>
+                            </div>
+                        </div>
+                        <p class="text-muted small mb-2"><em>House-made egg pasta, cultured butter, Umbrian black truffle</em></p>
+                        <p class="text-secondary small mb-0" style="font-family: sans-serif; line-height: 1.6;">Fine ribbons of delicate egg pasta glossy with rich mountain butter and showered with freshly shaved black truffles.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -201,45 +249,60 @@
     </div>
     <div class="container my-5 py-3">
         <div class="row justify-content-center">
-            <div class="col-lg-8">
+            <div class="col-lg-9">
                 <!-- Item 1 -->
-                <div class="mb-5 pb-4 border-bottom border-light">
-                    <div class="d-flex flex-wrap justify-content-between align-items-baseline mb-2">
-                        <h3 class="menu-item-title text-dark mb-1">Filetto di Branzino all’Acqua Pazza</h3>
-                        <div class="d-flex gap-1">
-                            <span class="dietary-badge">Gluten-Free</span>
-                            <span class="dietary-badge">Dairy-Free</span>
-                            <span class="dietary-badge">Nut-Free</span>
-                        </div>
+                <div class="d-flex gap-3 gap-md-4 mb-5 pb-4 border-bottom border-light">
+                    <div>
+                        <div class="menu-image-placeholder d-flex align-items-center justify-content-center text-muted small font-sans bg-light">No Photo</div>
                     </div>
-                    <p class="text-muted small mb-1"><em>Wild sea bass, heirloom cherry tomatoes, wild fennel</em></p>
-                    <p class="text-secondary small" style="font-family: sans-serif; line-height: 1.6;">Pan-seared sea bass fillet poached gently in a refined, aromatic "crazy water" tomato broth.</p>
+                    <div class="flex-grow-1">
+                        <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-2">
+                            <h3 class="menu-item-title font-script text-brand-red mb-0">Filetto di Branzino all’Acqua Pazza</h3>
+                            <div class="d-flex gap-1">
+                                <span class="dietary-badge">Gluten-Free</span>
+                                <span class="dietary-badge">Dairy-Free</span>
+                                <span class="dietary-badge">Nut-Free</span>
+                            </div>
+                        </div>
+                        <p class="text-muted small mb-2"><em>Wild sea bass, heirloom cherry tomatoes, wild fennel</em></p>
+                        <p class="text-secondary small mb-0" style="font-family: sans-serif; line-height: 1.6;">Pan-seared sea bass fillet poached gently in a refined, aromatic "crazy water" tomato broth.</p>
+                    </div>
                 </div>
                 <!-- Item 2 -->
-                <div class="mb-5 pb-4 border-bottom border-light">
-                    <div class="d-flex flex-wrap justify-content-between align-items-baseline mb-2">
-                        <h3 class="menu-item-title text-dark mb-1">Anatra al Balsamico Invecchiato</h3>
-                        <div class="d-flex gap-1">
-                            <span class="dietary-badge">Gluten-Free</span>
-                            <span class="dietary-badge">Dairy-Free</span>
-                            <span class="dietary-badge">Nut-Free</span>
-                        </div>
+                <div class="d-flex gap-3 gap-md-4 mb-5 pb-4 border-bottom border-light">
+                    <div>
+                        <div class="menu-image-placeholder d-flex align-items-center justify-content-center text-muted small font-sans bg-light">No Photo</div>
                     </div>
-                    <p class="text-muted small mb-1"><em>Duck breast, 25-year aged balsamic, caramelized figs</em></p>
-                    <p class="text-secondary small" style="font-family: sans-serif; line-height: 1.6;">Pan-roasted, rosy duck breast glazed with a velvety, syrupy traditional balsamic reduction and served with sweet figs.</p>
+                    <div class="flex-grow-1">
+                        <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-2">
+                            <h3 class="menu-item-title font-script text-brand-red mb-0">Anatra al Balsamico Invecchiato</h3>
+                            <div class="d-flex gap-1">
+                                <span class="dietary-badge">Gluten-Free</span>
+                                <span class="dietary-badge">Dairy-Free</span>
+                                <span class="dietary-badge">Nut-Free</span>
+                            </div>
+                        </div>
+                        <p class="text-muted small mb-2"><em>Duck breast, 25-year aged balsamic, caramelized figs</em></p>
+                        <p class="text-secondary small mb-0" style="font-family: sans-serif; line-height: 1.6;">Pan-roasted, rosy duck breast glazed with a velvety, syrupy traditional balsamic reduction and served with sweet figs.</p>
+                    </div>
                 </div>
                 <!-- Item 3 -->
-                <div class="mb-5">
-                    <div class="d-flex flex-wrap justify-content-between align-items-baseline mb-2">
-                        <h3 class="menu-item-title text-dark mb-1">Melanzane alla Rinascimentale</h3>
-                        <div class="d-flex gap-1">
-                            <span class="dietary-badge">Vegetarian</span>
-                            <span class="dietary-badge">Gluten-Free</span>
-                            <span class="dietary-badge">Nut-Free</span>
-                        </div>
+                <div class="d-flex gap-3 gap-md-4 mb-5">
+                    <div>
+                        <div class="menu-image-placeholder d-flex align-items-center justify-content-center text-muted small font-sans bg-light">No Photo</div>
                     </div>
-                    <p class="text-muted small mb-1"><em>Heirloom eggplant, smoked provola, basil oil</em></p>
-                    <p class="text-secondary small" style="font-family: sans-serif; line-height: 1.6;">A deconstructed, elegant take on eggplant parmigiana, featuring layers of baked eggplant, melted smoky cheese, and intense tomato essence.</p>
+                    <div class="flex-grow-1">
+                        <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-2">
+                            <h3 class="menu-item-title font-script text-brand-red mb-0">Melanzane alla Rinascimentale</h3>
+                            <div class="d-flex gap-1">
+                                <span class="dietary-badge">Vegetarian</span>
+                                <span class="dietary-badge">Gluten-Free</span>
+                                <span class="dietary-badge">Nut-Free</span>
+                            </div>
+                        </div>
+                        <p class="text-muted small mb-2"><em>Heirloom eggplant, smoked provola, basil oil</em></p>
+                        <p class="text-secondary small mb-0" style="font-family: sans-serif; line-height: 1.6;">A deconstructed, elegant take on eggplant parmigiana, featuring layers of baked eggplant, melted smoky cheese, and intense tomato essence.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -256,43 +319,58 @@
     </div>
     <div class="container my-5 py-3">
         <div class="row justify-content-center">
-            <div class="col-lg-8">
+            <div class="col-lg-9">
                 <!-- Item 1 -->
-                <div class="mb-5 pb-4 border-bottom border-light">
-                    <div class="d-flex flex-wrap justify-content-between align-items-baseline mb-2">
-                        <h3 class="menu-item-title text-dark mb-1">Deconstructed Tiramisù</h3>
-                        <div class="d-flex gap-1">
-                            <span class="dietary-badge">Vegetarian</span>
-                            <span class="dietary-badge">Nut-Free</span>
-                        </div>
+                <div class="d-flex gap-3 gap-md-4 mb-5 pb-4 border-bottom border-light">
+                    <div>
+                        <div class="menu-image-placeholder d-flex align-items-center justify-content-center text-muted small font-sans bg-light">No Photo</div>
                     </div>
-                    <p class="text-muted small mb-1"><em>Mascarpone mousse, espresso-soaked sponge, dark chocolate</em></p>
-                    <p class="text-secondary small" style="font-family: sans-serif; line-height: 1.6;">A modern presentation of the classic, featuring airy piped mascarpone, espresso spheres, and delicate chocolate tuiles.</p>
+                    <div class="flex-grow-1">
+                        <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-2">
+                            <h3 class="menu-item-title font-script text-brand-red mb-0">Deconstructed Tiramisù</h3>
+                            <div class="d-flex gap-1">
+                                <span class="dietary-badge">Vegetarian</span>
+                                <span class="dietary-badge">Nut-Free</span>
+                            </div>
+                        </div>
+                        <p class="text-muted small mb-2"><em>Mascarpone mousse, espresso-soaked sponge, dark chocolate</em></p>
+                        <p class="text-secondary small mb-0" style="font-family: sans-serif; line-height: 1.6;">A modern presentation of the classic, featuring airy piped mascarpone, espresso spheres, and delicate chocolate tuiles.</p>
+                    </div>
                 </div>
                 <!-- Item 2 -->
-                <div class="mb-5 pb-4 border-bottom border-light">
-                    <div class="d-flex flex-wrap justify-content-between align-items-baseline mb-2">
-                        <h3 class="menu-item-title text-dark mb-1">Panna Cotta allo Zafferano</h3>
-                        <div class="d-flex gap-1">
-                            <span class="dietary-badge">Vegetarian</span>
-                            <span class="dietary-badge">Gluten-Free</span>
-                            <span class="dietary-badge">Nut-Free</span>
-                        </div>
+                <div class="d-flex gap-3 gap-md-4 mb-5 pb-4 border-bottom border-light">
+                    <div>
+                        <div class="menu-image-placeholder d-flex align-items-center justify-content-center text-muted small font-sans bg-light">No Photo</div>
                     </div>
-                    <p class="text-muted small mb-1"><em>Heavy cream, saffron, wild berries</em></p>
-                    <p class="text-secondary small" style="font-family: sans-serif; line-height: 1.6;">A silky, golden-hued cream gelatin infused with premium saffron strands, contrasted by a tart berry compote.</p>
+                    <div class="flex-grow-1">
+                        <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-2">
+                            <h3 class="menu-item-title font-script text-brand-red mb-0">Panna Cotta allo Zafferano</h3>
+                            <div class="d-flex gap-1">
+                                <span class="dietary-badge">Vegetarian</span>
+                                <span class="dietary-badge">Gluten-Free</span>
+                                <span class="dietary-badge">Nut-Free</span>
+                            </div>
+                        </div>
+                        <p class="text-muted small mb-2"><em>Heavy cream, saffron, wild berries</em></p>
+                        <p class="text-secondary small mb-0" style="font-family: sans-serif; line-height: 1.6;">A silky, golden-hued cream gelatin infused with premium saffron strands, contrasted by a tart berry compote.</p>
+                    </div>
                 </div>
                 <!-- Item 3 -->
-                <div class="mb-5">
-                    <div class="d-flex flex-wrap justify-content-between align-items-baseline mb-2">
-                        <h3 class="menu-item-title text-dark mb-1">Torta Caprese Rivisitata</h3>
-                        <div class="d-flex gap-1">
-                            <span class="dietary-badge">Vegetarian</span>
-                            <span class="dietary-badge">Gluten-Free</span>
-                        </div>
+                <div class="d-flex gap-3 gap-md-4 mb-5">
+                    <div>
+                        <div class="menu-image-placeholder d-flex align-items-center justify-content-center text-muted small font-sans bg-light">No Photo</div>
                     </div>
-                    <p class="text-muted small mb-1"><em>Almond flour, dark chocolate, blood orange sorbet</em></p>
-                    <p class="text-secondary small" style="font-family: sans-serif; line-height: 1.6;">A flourless, intensely rich chocolate and almond cake served warm alongside a refreshing, vibrant citrus sorbet.</p>
+                    <div class="flex-grow-1">
+                        <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-2">
+                            <h3 class="menu-item-title font-script text-brand-red mb-0">Torta Caprese Rivisitata</h3>
+                            <div class="d-flex gap-1">
+                                <span class="dietary-badge">Vegetarian</span>
+                                <span class="dietary-badge">Gluten-Free</span>
+                            </div>
+                        </div>
+                        <p class="text-muted small mb-2"><em>Almond flour, dark chocolate, blood orange sorbet</em></p>
+                        <p class="text-secondary small mb-0" style="font-family: sans-serif; line-height: 1.6;">A flourless, intensely rich chocolate and almond cake served warm alongside a refreshing, vibrant citrus sorbet.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -303,9 +381,6 @@
 <!-- CORE MENU ENGINE: INTERACTIVE NAVIGATION   -->
 <!-- ========================================== -->
 <script>
-/**
- * Menu Local SPA Router Engine Configuration
- */
 const MenuDomRouter = {
     routes: {
         '#antipasti': 'antipasti-view',
@@ -335,19 +410,16 @@ const MenuDomRouter = {
         const currentHash = window.location.hash || '#antipasti';
         const targetViewId = this.routes[currentHash] || 'antipasti-view';
 
-        // 1. Hide all course application sections
         document.querySelectorAll('.spa-section').forEach(section => {
             section.classList.remove('active-view');
         });
 
-        // 2. Render targeted menu view
         const activeTarget = document.getElementById(targetViewId);
         if (activeTarget) {
             activeTarget.classList.add('active-view');
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        // 3. Keep menu sub-nav indicators highlighted correctly
         document.querySelectorAll('.spa-nav-link').forEach(link => {
             link.classList.remove('active-route');
             if (link.getAttribute('href') === currentHash) {

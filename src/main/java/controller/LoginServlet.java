@@ -53,7 +53,17 @@ public class LoginServlet extends HttpServlet {
 
             session.setAttribute("loggedInUser", user);
 
-            response.sendRedirect(request.getContextPath() + "/jsp/index.jsp");
+            if (user.getRole().equals("admin")) {
+
+                response.sendRedirect(
+                        request.getContextPath() + "/jsp/dashboard.jsp");
+
+            } else {
+
+                response.sendRedirect(
+                        request.getContextPath() + "/jsp/index.jsp");
+
+            }
 
         } else {
 

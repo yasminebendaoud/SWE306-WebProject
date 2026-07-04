@@ -78,12 +78,12 @@
             Luna e Vino
         </span>
 
-        <a href="${pageContext.request.contextPath}/jsp/faq.jsp#faq">
-            Coming Soon
+        <a href="${pageContext.request.contextPath}/jsp/reservations.jsp#reservations">
+            Reservations
         </a>
 
         <a href="${pageContext.request.contextPath}/jsp/faq.jsp#contact">
-            Contact
+            Contact & FAQ
         </a>
 
     </div>

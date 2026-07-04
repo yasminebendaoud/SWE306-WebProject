@@ -20,7 +20,7 @@
     border-bottom: 1px solid #000000;
     position: sticky;
     top: 0;
-    z-index: 1020; /* Sits cleanly above content but respects main headers */
+    z-index: 1020;
 }
 
 .spa-nav-link {
@@ -74,10 +74,8 @@
 <!-- ========================================== -->
 <nav class="spa-nav-bar">
     <div class="container d-flex justify-content-center gap-2">
-        <a href="#home" class="spa-nav-link active-route" data-route="home">Home</a>
         <a href="#about" class="spa-nav-link" data-route="about">About Us</a>
-        <a href="#faq" class="spa-nav-link" data-route="faq">Inquiries</a>
-        <!-- Notice: Contact link is excluded here so it can only be triggered from the main header -->
+        <a href="#contact" class="spa-nav-link" data-route="contact">Contact Us</a>
     </div>
 </nav>
 
@@ -107,14 +105,16 @@
 </div>
 
 <!-- ========================================== -->
-<!-- VIEW 2: PHILOSOPHY & ABOUT                 -->
+<!-- VIEW 2: PHILOSOPHY, ABOUT & INQUIRIES      -->
 <!-- ========================================== -->
 <div id="about-view" class="spa-section">
+    <!-- About Header Title -->
     <div class="container-fluid grid-border-bottom text-center py-5 bg-white">
         <span class="text-uppercase text-brand-red font-sans fw-bold tracking-widest d-block mb-2">La Nostra Storia</span>
         <h2 class="display-3 fw-normal text-dark">Radical Heritage</h2>
     </div>
 
+    <!-- About Content -->
     <div class="container my-5 py-3">
         <div class="row g-5 align-items-center">
             <div class="col-md-5 px-4">
@@ -137,17 +137,14 @@
             </div>
         </div>
     </div>
-</div>
 
-<!-- ========================================== -->
-<!-- VIEW 3: GUEST INQUIRIES (FAQ)              -->
-<!-- ========================================== -->
-<div id="faq-view" class="spa-section">
-    <div class="container-fluid grid-border-bottom text-center py-5 bg-white">
+    <!-- Embedded Guest Inquiries Title Segment -->
+    <div class="container-fluid grid-border-bottom text-center py-5 bg-white mt-5">
         <span class="text-uppercase text-muted font-sans tracking-widest d-block mb-2">Informazioni</span>
         <h2 class="display-4 fw-normal text-dark">Guest Inquiries</h2>
     </div>
 
+    <!-- Embedded Guest Inquiries Content Accordion Elements -->
     <div class="container my-5 py-4">
         <div class="row justify-content-center">
             <div class="col-lg-8 bg-white border border-dark p-4 p-md-5">
@@ -186,7 +183,7 @@
 </div>
 
 <!-- ========================================== -->
-<!-- VIEW 4: CONTACT DESK ARCHITECTURE          -->
+<!-- VIEW 3: CONTACT DESK ARCHITECTURE          -->
 <!-- ========================================== -->
 <div id="contact-view" class="spa-section">
     <div class="container-fluid grid-border-bottom text-center py-5 bg-white">
@@ -256,20 +253,16 @@ const SPADomRouter = {
     routes: {
         '#home': 'home-view',
         '#about': 'about-view',
-        '#faq': 'faq-view',
         '#contact': 'contact-view'
     },
 
     init() {
-        // Listen to URL hash modifications (works for both the local sub-nav and the master header links)
         window.addEventListener('hashchange', () => this.handleRouting());
         
-        // Dynamic event interception for standard hashes
         document.addEventListener('click', (e) => {
             const anchor = e.target.closest('a');
             if (anchor && anchor.getAttribute('href') && anchor.getAttribute('href').startsWith('#')) {
                 const route = anchor.getAttribute('href');
-                // Ensure it's a known route in our configuration
                 if (this.routes[route]) {
                     e.preventDefault();
                     window.location.hash = route;
@@ -349,7 +342,6 @@ function handleFormSubmission(event) {
     return false;
 }
 
-// Spark system context lifecycle hook
 document.addEventListener('DOMContentLoaded', () => {
     SPADomRouter.init();
 });

@@ -1,20 +1,40 @@
-<footer class="py-5 bg-black text-white">
-    <div class="container">
-        <div class="row g-4 align-items-center font-sans">
-            <div class="col-md-4 text-center text-md-start">
-                <span class="text-uppercase tracking-widest text-brand-red fw-bold">LUNA E VINO</span>
-            </div>
-            <div class="col-md-4 text-center small text-muted">
-                DENGKIL, SELANGOR, MALAYSIA &nbsp;|&nbsp; CONCIERGE@LUNAEVINO.COM
-            </div>
-            <div class="col-md-4 text-center text-md-end small text-muted">
-                &copy; 2026 LUNA E VINO. EDITORIAL CODESECTION.
-            </div>
-        </div>
-    </div>
-</footer>
+<footer style="
+    background:#000;
+    color:white;
+    padding:40px 0;
+">
 
-<!-- Bootstrap Bundle JS CDN -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+    <div style="
+        max-width:1400px;
+        margin:0 auto;
+        display:flex;
+        justify-content:space-evenly;
+        align-items:center;
+        flex-wrap:nowrap;
+        text-align:center;
+        width:100%;
+    ">
+
+        <span style="color:#b3002d;font-weight:bold;letter-spacing:2px;">
+            LUNA E VINO
+        </span>
+
+        <span style="color:#999;">
+            DENGKIL, SELANGOR, MALAYSIA
+        </span>
+
+        <span style="color:#999;">
+            CONCIERGE@LUNAEVINO.COM
+        </span>
+
+        <span style="color:#999;">
+            © 2026 LUNA E VINO
+        </span>
+
+        <span style="color:#999;">
+            EDITORIAL CODESECTION
+        </span>
+
+    </div>
+
+</footer>

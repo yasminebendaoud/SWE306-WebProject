@@ -178,7 +178,7 @@
                 <!-- Caesar Salad -->
                 <div class="row align-items-center mb-5 pb-4 border-bottom border-light g-3">
                     <div class="col-auto">
-                        <img src="-https://i.pinimg.com/1200x/56/c2/d5/56c2d5122d292e50d3c1982aa34c26a0.jpg" alt="Caesar Salad" class="menu-image-placeholder" />
+                        <img src="https://i.pinimg.com/1200x/56/c2/d5/56c2d5122d292e50d3c1982aa34c26a0.jpg" alt="Caesar Salad" class="menu-image-placeholder" />
                     </div>
                     <div class="col col-md-7 col-lg-8">
                         <div class="d-flex flex-wrap align-items-center gap-2 mb-1">
@@ -262,7 +262,7 @@
                 <!-- Niçoise Salad -->
                 <div class="row align-items-center mb-5 g-3">
                     <div class="col-auto">
-                        <img src="" alt="https://i.pinimg.com/1200x/bc/57/96/bc57960419775f4a2262bc981a6248b8.jpg" class="menu-image-placeholder" />
+                        <img src="https://i.pinimg.com/1200x/bc/57/96/bc57960419775f4a2262bc981a6248b8.jpg" class="menu-image-placeholder" />
                     </div>
                     <div class="col col-md-7 col-lg-8">
                         <div class="d-flex flex-wrap align-items-center gap-2 mb-1">
@@ -611,7 +611,7 @@
                 <!-- Tuna Steak -->
                 <div class="row align-items-center mb-5 pb-4 border-bottom border-light g-3">
                     <div class="col-auto">
-                        <img src="images/tuna-steak.jpg" alt="Tuna Steak with Lemon Caper Sauce" class="menu-image-placeholder" />
+                        <img src="https://i.pinimg.com/736x/58/90/fb/5890fb48ed8ada6d13b65318e8052113.jpg" alt="Tuna Steak with Lemon Caper Sauce" class="menu-image-placeholder" />
                     </div>
                     <div class="col col-md-7 col-lg-8">
                         <div class="d-flex flex-wrap align-items-center gap-2 mb-1">
@@ -632,7 +632,7 @@
                 <!-- Porchetta -->
                 <div class="row align-items-center mb-5 pb-4 border-bottom border-light g-3">
                     <div class="col-auto">
-                        <img src="images/porchetta.jpg" alt="Porchetta" class="menu-image-placeholder" />
+                        <img src="https://i.pinimg.com/736x/a3/d8/04/a3d804e244d2f6c1ec225c994b905b7b.jpg" alt="Porchetta" class="menu-image-placeholder" />
                     </div>
                     <div class="col col-md-7 col-lg-8">
                         <div class="d-flex flex-wrap align-items-center gap-2 mb-1">
@@ -653,7 +653,7 @@
                 <!-- Chicken Parmigiana -->
                 <div class="row align-items-center mb-5 pb-4 border-bottom border-light g-3">
                     <div class="col-auto">
-                        <img src="images/chicken-parmigiana.jpg" alt="Chicken Parmigiana" class="menu-image-placeholder" />
+                        <img src="https://i.pinimg.com/1200x/d6/ea/04/d6ea04de71e5e66abf9390565eafbbc6.jpg" alt="Chicken Parmigiana" class="menu-image-placeholder" />
                     </div>
                     <div class="col col-md-7 col-lg-8">
                         <div class="d-flex flex-wrap align-items-center gap-2 mb-1">
@@ -672,7 +672,7 @@
                 <!-- Osso Buco -->
                 <div class="row align-items-center mb-5 pb-4 border-bottom border-light g-3">
                     <div class="col-auto">
-                        <img src="images/osso-buco.jpg" alt="Osso Buco alla Milanese" class="menu-image-placeholder" />
+                        <img src="https://i.pinimg.com/1200x/64/12/c8/6412c824f21e595fc66540a3aa42d462.jpg" alt="Osso Buco alla Milanese" class="menu-image-placeholder" />
                     </div>
                     <div class="col col-md-7 col-lg-8">
                         <div class="d-flex flex-wrap align-items-center gap-2 mb-1">
@@ -691,7 +691,7 @@
                 <!-- Saltimbocca -->
                 <div class="row align-items-center mb-5 pb-4 border-bottom border-light g-3">
                     <div class="col-auto">
-                        <img src="images/saltimbocca.jpg" alt="Saltimbocca alla Romana" class="menu-image-placeholder" />
+                        <img src="https://i.pinimg.com/1200x/19/ab/76/19ab76330c3fd03e319ee60e9377c0c7.jpg" alt="Saltimbocca alla Romana" class="menu-image-placeholder" />
                     </div>
                     <div class="col col-md-7 col-lg-8">
                         <div class="d-flex flex-wrap align-items-center gap-2 mb-1">
@@ -712,7 +712,7 @@
                 <!-- Pollo al Limone -->
                 <div class="row align-items-center mb-5 pb-4 border-bottom border-light g-3">
                     <div class="col-auto">
-                        <img src="images/pollo-limone.jpg" alt="Pollo al Limone" class="menu-image-placeholder" />
+                        <img src="https://i.pinimg.com/1200x/31/71/73/317173b98fe4bcfd80bc4f4699a8c24a.jpg" alt="Pollo al Limone" class="menu-image-placeholder" />
                     </div>
                     <div class="col col-md-7 col-lg-8">
                         <div class="d-flex flex-wrap align-items-center gap-2 mb-1">
@@ -732,7 +732,7 @@
                 <!-- Bistecca -->
                 <div class="row align-items-center mb-5 pb-4 border-bottom border-light g-3">
                     <div class="col-auto">
-                        <img src="images/bistecca.jpg" alt="Bistecca alla Griglia" class="menu-image-placeholder" />
+                        <img src="https://i.pinimg.com/1200x/9e/0c/b6/9e0cb6ab04a0008718b83a6972efd762.jpg" alt="Bistecca alla Griglia" class="menu-image-placeholder" />
                     </div>
                     <div class="col col-md-7 col-lg-8">
                         <div class="d-flex flex-wrap align-items-center gap-2 mb-1">
@@ -753,7 +753,7 @@
                 <!-- Branzino -->
                 <div class="row align-items-center mb-5 pb-4 border-bottom border-light g-3">
                     <div class="col-auto">
-                        <img src="images/branzino.jpg" alt="Branzino al Forno" class="menu-image-placeholder" />
+                        <img src="https://i.pinimg.com/1200x/3b/a7/63/3ba763b64bc0dd24b3e5531af1fe6006.jpg" alt="Branzino al Forno" class="menu-image-placeholder" />
                     </div>
                     <div class="col col-md-7 col-lg-8">
                         <div class="d-flex flex-wrap align-items-center gap-2 mb-1">
@@ -774,7 +774,7 @@
                 <!-- Pollo ai Funghi -->
                 <div class="row align-items-center mb-5 pb-4 border-bottom border-light g-3">
                     <div class="col-auto">
-                        <img src="images/pollo-funghi.jpg" alt="Pollo ai Funghi" class="menu-image-placeholder" />
+                        <img src="https://i.pinimg.com/736x/99/2c/89/992c89c878b87a9b8e8e12c39d38030b.jpg" alt="Pollo ai Funghi" class="menu-image-placeholder" />
                     </div>
                     <div class="col col-md-7 col-lg-8">
                         <div class="d-flex flex-wrap align-items-center gap-2 mb-1">
@@ -794,7 +794,7 @@
                 <!-- Agnello Scottadito -->
                 <div class="row align-items-center mb-5 g-3">
                     <div class="col-auto">
-                        <img src="images/agnello-scottadito.jpg" alt="Agnello Scottadito" class="menu-image-placeholder" />
+                        <img src="https://i.pinimg.com/1200x/e2/1c/12/e21c12e22175846ef40106149e5aff03.jpg" alt="Agnello Scottadito" class="menu-image-placeholder" />
                     </div>
                     <div class="col col-md-7 col-lg-8">
                         <div class="d-flex flex-wrap align-items-center gap-2 mb-1">
@@ -832,7 +832,7 @@
                 <!-- Margherita -->
                 <div class="row align-items-center mb-5 pb-4 border-bottom border-light g-3">
                     <div class="col-auto">
-                        <img src="images/pizza-margherita.jpg" alt="Margherita" class="menu-image-placeholder" />
+                        <img src="https://i.pinimg.com/736x/61/89/e1/6189e1a3f01e977cfe36ee3b3e876ca1.jpg" alt="Margherita" class="menu-image-placeholder" />
                     </div>
                     <div class="col col-md-7 col-lg-8">
                         <div class="d-flex flex-wrap align-items-center gap-2 mb-1">
@@ -852,7 +852,7 @@
                 <!-- Napoletana -->
                 <div class="row align-items-center mb-5 pb-4 border-bottom border-light g-3">
                     <div class="col-auto">
-                        <img src="images/pizza-napoletana.jpg" alt="Napoletana" class="menu-image-placeholder" />
+                        <img src="https://i.pinimg.com/736x/f6/76/e6/f676e67e713c5e86f2dd8f3ec9935a12.jpg" alt="Napoletana" class="menu-image-placeholder" />
                     </div>
                     <div class="col col-md-7 col-lg-8">
                         <div class="d-flex flex-wrap align-items-center gap-2 mb-1">
@@ -872,7 +872,7 @@
                 <!-- Tonno -->
                 <div class="row align-items-center mb-5 pb-4 border-bottom border-light g-3">
                     <div class="col-auto">
-                        <img src="images/pizza-tonno.jpg" alt="Tonno" class="menu-image-placeholder" />
+                        <img src="https://i.pinimg.com/1200x/93/44/3e/93443e7d168dbdfe01244fc2f25cc1f4.jpg" alt="Tonno" class="menu-image-placeholder" />
                     </div>
                     <div class="col col-md-7 col-lg-8">
                         <div class="d-flex flex-wrap align-items-center gap-2 mb-1">
@@ -891,7 +891,7 @@
                 <!-- Diavola -->
                 <div class="row align-items-center mb-5 pb-4 border-bottom border-light g-3">
                     <div class="col-auto">
-                        <img src="images/pizza-diavola.jpg" alt="Diavola" class="menu-image-placeholder" />
+                        <img src="https://i.pinimg.com/1200x/b2/ff/4c/b2ff4cdb4165b9d6a2aac915fc4325ed.jpg" alt="Diavola" class="menu-image-placeholder" />
                     </div>
                     <div class="col col-md-7 col-lg-8">
                         <div class="d-flex flex-wrap align-items-center gap-2 mb-1">
@@ -910,7 +910,7 @@
                 <!-- Capricciosa -->
                 <div class="row align-items-center mb-5 pb-4 border-bottom border-light g-3">
                     <div class="col-auto">
-                        <img src="images/pizza-capricciosa.jpg" alt="Capricciosa" class="menu-image-placeholder" />
+                        <img src="https://i.pinimg.com/236x/b8/63/3a/b8633a5cd2c935c1c629bc8c7866aed2.jpg" alt="Capricciosa" class="menu-image-placeholder" />
                     </div>
                     <div class="col col-md-7 col-lg-8">
                         <div class="d-flex flex-wrap align-items-center gap-2 mb-1">
@@ -929,7 +929,7 @@
                 <!-- Calzone -->
                 <div class="row align-items-center mb-5 pb-4 border-bottom border-light g-3">
                     <div class="col-auto">
-                        <img src="images/pizza-calzone.jpg" alt="Calzone" class="menu-image-placeholder" />
+                        <img src="https://i.pinimg.com/236x/be/22/fe/be22feda81894e96e7e861ba476e7866.jpg" alt="Calzone" class="menu-image-placeholder" />
                     </div>
                     <div class="col col-md-7 col-lg-8">
                         <div class="d-flex flex-wrap align-items-center gap-2 mb-1">
@@ -948,7 +948,7 @@
                 <!-- Pizza Ciao -->
                 <div class="row align-items-center mb-5 pb-4 border-bottom border-light g-3">
                     <div class="col-auto">
-                        <img src="images/pizza-ciao.jpg" alt="Pizza Ciao" class="menu-image-placeholder" />
+                        <img src="https://i.pinimg.com/1200x/a1/d0/b2/a1d0b20e027eb193c7293123b697e0ce.jpg" alt="Pizza Ciao" class="menu-image-placeholder" />
                     </div>
                     <div class="col col-md-7 col-lg-8">
                         <div class="d-flex flex-wrap align-items-center gap-2 mb-1">
@@ -967,7 +967,7 @@
                 <!-- Ai Fichi -->
                 <div class="row align-items-center mb-5 pb-4 border-bottom border-light g-3">
                     <div class="col-auto">
-                        <img src="images/pizza-fichi.jpg" alt="Ai Fichi" class="menu-image-placeholder" />
+                        <img src="https://i.pinimg.com/236x/15/00/bd/1500bde33000062223d54f9217cac2e7.jpg" alt="Ai Fichi" class="menu-image-placeholder" />
                     </div>
                     <div class="col col-md-7 col-lg-8">
                         <div class="d-flex flex-wrap align-items-center gap-2 mb-1">
@@ -986,7 +986,7 @@
                 <!-- Burrata e Rucola -->
                 <div class="row align-items-center mb-5 pb-4 border-bottom border-light g-3">
                     <div class="col-auto">
-                        <img src="images/pizza-burrata.jpg" alt="Burrata e Rucola" class="menu-image-placeholder" />
+                        <img src="https://i.pinimg.com/736x/ff/65/a9/ff65a9ea4cbe99d7eba340831f0d5aba.jpg" alt="Burrata e Rucola" class="menu-image-placeholder" />
                     </div>
                     <div class="col col-md-7 col-lg-8">
                         <div class="d-flex flex-wrap align-items-center gap-2 mb-1">
@@ -1006,7 +1006,7 @@
                 <!-- Al Salmone -->
                 <div class="row align-items-center mb-5 pb-4 border-bottom border-light g-3">
                     <div class="col-auto">
-                        <img src="images/pizza-salmone.jpg" alt="Al Salmone" class="menu-image-placeholder" />
+                        <img src="https://i.pinimg.com/1200x/40/16/07/401607cb1b6e9080e255e6bca3c51a98.jpg" alt="Al Salmone" class="menu-image-placeholder" />
                     </div>
                     <div class="col col-md-7 col-lg-8">
                         <div class="d-flex flex-wrap align-items-center gap-2 mb-1">
@@ -1025,7 +1025,7 @@
                 <!-- Costiera -->
                 <div class="row align-items-center mb-5 pb-4 border-bottom border-light g-3">
                     <div class="col-auto">
-                        <img src="images/pizza-seafood.jpg" alt="Costiera" class="menu-image-placeholder" />
+                        <img src="https://i.pinimg.com/736x/de/96/5b/de965b6fffac6836bca964564afc0864.jpg" alt="Costiera" class="menu-image-placeholder" />
                     </div>
                     <div class="col col-md-7 col-lg-8">
                         <div class="d-flex flex-wrap align-items-center gap-2 mb-1">
@@ -1045,7 +1045,7 @@
                 <!-- Vegetariana -->
                 <div class="row align-items-center mb-5 pb-4 border-bottom border-light g-3">
                     <div class="col-auto">
-                        <img src="images/pizza-vegetariana.jpg" alt="Vegetariana" class="menu-image-placeholder" />
+                        <img src="https://i.pinimg.com/1200x/b0/af/94/b0af9403302893bd9c611741020330fe.jpg" alt="Vegetariana" class="menu-image-placeholder" />
                     </div>
                     <div class="col col-md-7 col-lg-8">
                         <div class="d-flex flex-wrap align-items-center gap-2 mb-1">
@@ -1065,7 +1065,7 @@
                 <!-- Funghi Misti -->
                 <div class="row align-items-center mb-5 pb-4 border-bottom border-light g-3">
                     <div class="col-auto">
-                        <img src="images/pizza-funghi.jpg" alt="Funghi Misti" class="menu-image-placeholder" />
+                        <img src="https://i.pinimg.com/736x/2f/e8/1d/2fe81dba03b75e4c731e211d041b814a.jpg" alt="Funghi Misti" class="menu-image-placeholder" />
                     </div>
                     <div class="col col-md-7 col-lg-8">
                         <div class="d-flex flex-wrap align-items-center gap-2 mb-1">
@@ -1085,7 +1085,7 @@
                 <!-- Tropicale -->
                 <div class="row align-items-center mb-5 pb-4 border-bottom border-light g-3">
                     <div class="col-auto">
-                        <img src="images/pizza-tropicale.jpg" alt="Tropicale" class="menu-image-placeholder" />
+                        <img src="https://i.pinimg.com/736x/f4/6d/d5/f46dd5b4121e8ee4bde2809a4d635192.jpg" alt="Tropicale" class="menu-image-placeholder" />
                     </div>
                     <div class="col col-md-7 col-lg-8">
                         <div class="d-flex flex-wrap align-items-center gap-2 mb-1">
@@ -1104,7 +1104,7 @@
                 <!-- Bianca -->
                 <div class="row align-items-center mb-5 pb-4 border-bottom border-light g-3">
                     <div class="col-auto">
-                        <img src="images/pizza-bianca.jpg" alt="Bianca" class="menu-image-placeholder" />
+                        <img src="https://i.pinimg.com/1200x/7d/7c/3e/7d7c3e2cb648c095646e499ee78a2f83.jpg" alt="Bianca" class="menu-image-placeholder" />
                     </div>
                     <div class="col col-md-7 col-lg-8">
                         <div class="d-flex flex-wrap align-items-center gap-2 mb-1">
@@ -1124,7 +1124,7 @@
                 <!-- Rossa -->
                 <div class="row align-items-center mb-5 g-3">
                     <div class="col-auto">
-                        <img src="images/pizza-rossa.jpg" alt="Rossa" class="menu-image-placeholder" />
+                        <img src="https://i.pinimg.com/736x/96/14/a8/9614a8b724c660abdd8a75d148b01507.jpg" alt="Rossa" class="menu-image-placeholder" />
                     </div>
                     <div class="col col-md-7 col-lg-8">
                         <div class="d-flex flex-wrap align-items-center gap-2 mb-1">
@@ -1163,7 +1163,7 @@
                 <!-- Tiramisu -->
                 <div class="row align-items-center mb-5 pb-4 border-bottom border-light g-3">
                     <div class="col-auto">
-                        <img src="images/tiramisu.jpg" alt="Tiramisu" class="menu-image-placeholder" />
+                        <img src="https://i.pinimg.com/1200x/6b/49/0c/6b490c27c6e5bc3793008cd9a09c856c.jpg" alt="Tiramisu" class="menu-image-placeholder" />
                     </div>
                     <div class="col col-md-7 col-lg-8">
                         <div class="d-flex flex-wrap align-items-center gap-2 mb-1">
@@ -1183,7 +1183,7 @@
                 <!-- Chocolate Molten Lava Cake -->
                 <div class="row align-items-center mb-5 pb-4 border-bottom border-light g-3">
                     <div class="col-auto">
-                        <img src="images/lava-cake.jpg" alt="Chocolate Molten Lava Cake" class="menu-image-placeholder" />
+                        <img src="https://i.pinimg.com/236x/19/86/ed/1986edbbdb53b64d170c2026de24c947.jpg" alt="Chocolate Molten Lava Cake" class="menu-image-placeholder" />
                     </div>
                     <div class="col col-md-7 col-lg-8">
                         <div class="d-flex flex-wrap align-items-center gap-2 mb-1">
@@ -1203,7 +1203,7 @@
                 <!-- Cannoli -->
                 <div class="row align-items-center mb-5 pb-4 border-bottom border-light g-3">
                     <div class="col-auto">
-                        <img src="images/cannoli.jpg" alt="Cannoli" class="menu-image-placeholder" />
+                        <img src="https://i.pinimg.com/1200x/f1/38/56/f1385614c92ea4200b289063b4589928.jpg" alt="Cannoli" class="menu-image-placeholder" />
                     </div>
                     <div class="col col-md-7 col-lg-8">
                         <div class="d-flex flex-wrap align-items-center gap-2 mb-1">
@@ -1222,7 +1222,7 @@
                 <!-- Pear Tarte Tatin -->
                 <div class="row align-items-center mb-5 pb-4 border-bottom border-light g-3">
                     <div class="col-auto">
-                        <img src="images/tarte-tatin.jpg" alt="Pear Tarte Tatin" class="menu-image-placeholder" />
+                        <img src="https://i.pinimg.com/736x/8f/2e/35/8f2e35b58ea5d86ade2dcbac43caa298.jpg" alt="Pear Tarte Tatin" class="menu-image-placeholder" />
                     </div>
                     <div class="col col-md-7 col-lg-8">
                         <div class="d-flex flex-wrap align-items-center gap-2 mb-1">
@@ -1242,7 +1242,7 @@
                 <!-- Panna Cotta -->
                 <div class="row align-items-center mb-5 pb-4 border-bottom border-light g-3">
                     <div class="col-auto">
-                        <img src="images/panna-cotta.jpg" alt="Panna Cotta" class="menu-image-placeholder" />
+                        <img src="https://i.pinimg.com/736x/41/f1/f8/41f1f85df2a0bc84b5a009b712ac9671.jpg" alt="Panna Cotta" class="menu-image-placeholder" />
                     </div>
                     <div class="col col-md-7 col-lg-8">
                         <div class="d-flex flex-wrap align-items-center gap-2 mb-1">
@@ -1263,7 +1263,7 @@
                 <!-- Crème Brûlée -->
                 <div class="row align-items-center mb-5 pb-4 border-bottom border-light g-3">
                     <div class="col-auto">
-                        <img src="images/creme-brulee.jpg" alt="Crème Brûlée" class="menu-image-placeholder" />
+                        <img src="https://i.pinimg.com/736x/3c/05/b0/3c05b024c5c51d32ad8eba27cdc6e512.jpg" alt="Crème Brûlée" class="menu-image-placeholder" />
                     </div>
                     <div class="col col-md-7 col-lg-8">
                         <div class="d-flex flex-wrap align-items-center gap-2 mb-1">
@@ -1284,7 +1284,7 @@
                 <!-- Homemade Gelato -->
                 <div class="row align-items-center mb-5 pb-4 border-bottom border-light g-3">
                     <div class="col-auto">
-                        <img src="images/gelato.jpg" alt="Homemade Gelato" class="menu-image-placeholder" />
+                        <img src="https://i.pinimg.com/736x/7a/da/fc/7adafc8e1a03110bc2817323eb5d2d7e.jpg" alt="Homemade Gelato" class="menu-image-placeholder" />
                     </div>
                     <div class="col col-md-7 col-lg-8">
                         <div class="d-flex flex-wrap align-items-center gap-2 mb-1">
@@ -1304,7 +1304,7 @@
                 <!-- Sorbetto -->
                 <div class="row align-items-center mb-5 pb-4 border-bottom border-light g-3">
                     <div class="col-auto">
-                        <img src="images/sorbetto.jpg" alt="Sorbetto" class="menu-image-placeholder" />
+                        <img src="https://i.pinimg.com/736x/62/fe/71/62fe7111d95aeb3a5bd005224e401f6b.jpg" alt="Sorbetto" class="menu-image-placeholder" />
                     </div>
                     <div class="col col-md-7 col-lg-8">
                         <div class="d-flex flex-wrap align-items-center gap-2 mb-1">
@@ -1327,7 +1327,7 @@
                 <!-- Cheese Platter -->
                 <div class="row align-items-center mb-5 g-3">
                     <div class="col-auto">
-                        <img src="images/cheese-platter.jpg" alt="Cheese Platter" class="menu-image-placeholder" />
+                        <img src="https://i.pinimg.com/736x/91/4f/4e/914f4eebc9af5922082bc9d94011dd28.jpg" alt="Cheese Platter" class="menu-image-placeholder" />
                     </div>
                     <div class="col col-md-7 col-lg-8">
                         <div class="d-flex flex-wrap align-items-center gap-2 mb-1">
@@ -1363,7 +1363,7 @@
                 <!-- Espresso -->
                 <div class="row align-items-center mb-5 pb-4 border-bottom border-light g-3">
                     <div class="col-auto">
-                        <img src="images/espresso.jpg" alt="Espresso" class="menu-image-placeholder" />
+                        <img src="https://i.pinimg.com/736x/08/5c/e1/085ce167cbed682128ae1455234f885e.jpg" alt="Espresso" class="menu-image-placeholder" />
                     </div>
                     <div class="col col-md-7 col-lg-8">
                         <div class="d-flex flex-wrap align-items-center gap-2 mb-1">
@@ -1383,7 +1383,7 @@
                 <!-- Macchiato -->
                 <div class="row align-items-center mb-5 pb-4 border-bottom border-light g-3">
                     <div class="col-auto">
-                        <img src="images/macchiato.jpg" alt="Macchiato" class="menu-image-placeholder" />
+                        <img src="https://i.pinimg.com/736x/ea/3a/c9/ea3ac9030ff78175db4f8e6cda043e55.jpg" alt="Macchiato" class="menu-image-placeholder" />
                     </div>
                     <div class="col col-md-7 col-lg-8">
                         <div class="d-flex flex-wrap align-items-center gap-2 mb-1">
@@ -1402,7 +1402,7 @@
                 <!-- Americano -->
                 <div class="row align-items-center mb-5 pb-4 border-bottom border-light g-3">
                     <div class="col-auto">
-                        <img src="images/americano.jpg" alt="Americano" class="menu-image-placeholder" />
+                        <img src="https://i.pinimg.com/736x/42/dc/61/42dc61aa66899a5ef2cf4cf145ef9f40.jpg" alt="Americano" class="menu-image-placeholder" />
                     </div>
                     <div class="col col-md-7 col-lg-8">
                         <div class="d-flex flex-wrap align-items-center gap-2 mb-1">
@@ -1422,7 +1422,7 @@
                 <!-- Cappuccino -->
                 <div class="row align-items-center mb-5 pb-4 border-bottom border-light g-3">
                     <div class="col-auto">
-                        <img src="images/cappuccino.jpg" alt="Cappuccino" class="menu-image-placeholder" />
+                        <img src="https://i.pinimg.com/1200x/d3/89/a0/d389a04ccb1fa9f7d720c6979a723c95.jpg" alt="Cappuccino" class="menu-image-placeholder" />
                     </div>
                     <div class="col col-md-7 col-lg-8">
                         <div class="d-flex flex-wrap align-items-center gap-2 mb-1">
@@ -1441,7 +1441,7 @@
                 <!-- Caffè Latte -->
                 <div class="row align-items-center mb-5 pb-4 border-bottom border-light g-3">
                     <div class="col-auto">
-                        <img src="images/latte.jpg" alt="Caffè Latte" class="menu-image-placeholder" />
+                        <img src="https://i.pinimg.com/736x/60/3a/2d/603a2d6569ea8e2e74603111cdc40e30.jpg" alt="Caffè Latte" class="menu-image-placeholder" />
                     </div>
                     <div class="col col-md-7 col-lg-8">
                         <div class="d-flex flex-wrap align-items-center gap-2 mb-1">
@@ -1460,7 +1460,7 @@
                 <!-- Mocha -->
                 <div class="row align-items-center mb-5 pb-4 border-bottom border-light g-3">
                     <div class="col-auto">
-                        <img src="images/mocha.jpg" alt="Mocha" class="menu-image-placeholder" />
+                        <img src="https://i.pinimg.com/1200x/1d/ef/45/1def45ce8f7cacba26b29ec94b37bfb8.jpg" alt="Mocha" class="menu-image-placeholder" />
                     </div>
                     <div class="col col-md-7 col-lg-8">
                         <div class="d-flex flex-wrap align-items-center gap-2 mb-1">
@@ -1479,7 +1479,7 @@
                 <!-- Hot Chocolate -->
                 <div class="row align-items-center mb-5 pb-4 border-bottom border-light g-3">
                     <div class="col-auto">
-                        <img src="images/hot-chocolate.jpg" alt="Hot Chocolate" class="menu-image-placeholder" />
+                        <img src="https://i.pinimg.com/736x/d5/f9/63/d5f9636f55a7a30bfbce5e96c06ea5d5.jpg" alt="Hot Chocolate" class="menu-image-placeholder" />
                     </div>
                     <div class="col col-md-7 col-lg-8">
                         <div class="d-flex flex-wrap align-items-center gap-2 mb-1">
@@ -1498,7 +1498,7 @@
                 <!-- Tea -->
                 <div class="row align-items-center mb-5 pb-4 border-bottom border-light g-3">
                     <div class="col-auto">
-                        <img src="images/tea.jpg" alt="Tea" class="menu-image-placeholder" />
+                        <img src="https://i.pinimg.com/736x/4d/1d/58/4d1d58ffc1fe0f08d4b9f0e682e6332f.jpg" alt="Tea" class="menu-image-placeholder" />
                     </div>
                     <div class="col col-md-7 col-lg-8">
                         <div class="d-flex flex-wrap align-items-center gap-2 mb-1">
@@ -1518,7 +1518,7 @@
                 <!-- Fresh Juice -->
                 <div class="row align-items-center mb-5 pb-4 border-bottom border-light g-3">
                     <div class="col-auto">
-                        <img src="images/fresh-juice.jpg" alt="Fresh Juice" class="menu-image-placeholder" />
+                        <img src="https://i.pinimg.com/736x/02/56/ab/0256abe44a6b4786d6bdec6b84372f0a.jpg" alt="Fresh Juice" class="menu-image-placeholder" />
                     </div>
                     <div class="col col-md-7 col-lg-8">
                         <div class="d-flex flex-wrap align-items-center gap-2 mb-1">
@@ -1538,7 +1538,7 @@
                 <!-- Soft Drinks -->
                 <div class="row align-items-center mb-5 g-3">
                     <div class="col-auto">
-                        <img src="images/soft-drinks.jpg" alt="Soft Drinks" class="menu-image-placeholder" />
+                        <img src="https://i.pinimg.com/736x/68/eb/a2/68eba25efe0554a209fc83bdbae6e050.jpg" alt="Soft Drinks" class="menu-image-placeholder" />
                     </div>
                     <div class="col col-md-7 col-lg-8">
                         <div class="d-flex flex-wrap align-items-center gap-2 mb-1">

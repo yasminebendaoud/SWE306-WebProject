@@ -19,13 +19,19 @@
     text-transform:uppercase;
 }
 
+.footer-item{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    cursor:pointer;
+    transition:.3s;
+    white-space:nowrap;
+}
+
 .footer-logo{
     color:#b3002d;
     font-weight:700;
-}
-
-.footer-text{
-    display:inline;
 }
 
 .footer-icon{
@@ -34,23 +40,44 @@
     color:#999;
 }
 
-/* Mobile */
+.footer-short{
+    display:none;
+}
+
+.footer-full{
+    display:inline;
+}
+
+/* ---------- MOBILE ---------- */
+
 @media (max-width:768px){
 
     .footer-inner{
         justify-content:space-evenly;
     }
 
-    .footer-text{
+    .footer-logo .footer-full{
         display:none;
     }
 
-    .footer-icon{
+    .footer-logo .footer-short{
         display:inline;
     }
 
-    .footer-logo{
-        font-size:0.9rem;
+    .footer-item:not(.footer-logo) .footer-full{
+        display:none;
+    }
+
+    .footer-item:not(.footer-logo) .footer-icon{
+        display:inline;
+    }
+
+    .footer-item.active .footer-full{
+        display:inline;
+    }
+
+    .footer-item.active .footer-icon{
+        display:none;
     }
 
 }
@@ -60,30 +87,54 @@
 
     <div class="footer-inner">
 
-        <span class="footer-logo">
-            LUNA E VINO
+        <!-- Logo -->
+        <span class="footer-item footer-logo active" onclick="footerExpand(this)">
+            <span class="footer-short">LV</span>
+            <span class="footer-full">LUNA E VINO</span>
         </span>
 
-        <span>
-            <span class="footer-text">DENGKIL, SELANGOR, MALAYSIA</span>
+        <!-- Location -->
+        <span class="footer-item" onclick="footerExpand(this)">
             <i class="fa-solid fa-location-dot footer-icon"></i>
+            <span class="footer-full">DENGKIL, SELANGOR, MALAYSIA</span>
         </span>
 
-        <span>
-            <span class="footer-text">CONCIERGE@LUNAEVINO.COM</span>
+        <!-- Email -->
+        <span class="footer-item" onclick="footerExpand(this)">
             <i class="fa-solid fa-envelope footer-icon"></i>
+            <span class="footer-full">CONCIERGE@LUNAEVINO.COM</span>
         </span>
 
-        <span>
-            <span class="footer-text">© 2026 LUNA E VINO</span>
+        <!-- Copyright -->
+        <span class="footer-item" onclick="footerExpand(this)">
             <i class="fa-regular fa-copyright footer-icon"></i>
+            <span class="footer-full">© 2026 LUNA E VINO</span>
         </span>
 
-        <span>
-            <span class="footer-text">EDITORIAL CODESECTION</span>
+        <!-- Credits -->
+        <span class="footer-item" onclick="footerExpand(this)">
             <i class="fa-solid fa-code footer-icon"></i>
+            <span class="footer-full">EDITORIAL CODESECTION</span>
         </span>
 
     </div>
 
 </footer>
+
+<script>
+
+function footerExpand(item){
+
+    if(window.innerWidth > 768){
+        return;
+    }
+
+    document.querySelectorAll(".footer-item").forEach(function(el){
+        el.classList.remove("active");
+    });
+
+    item.classList.add("active");
+
+}
+
+</script>

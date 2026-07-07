@@ -165,18 +165,22 @@ case 6:
     </td>
 
     <td>
-
-        <a href="#" class="action-btn edit-btn">
-
-            Edit
-
-        </a>
-
-        <a href="#" class="action-btn delete-btn">
-
-            Delete
-
-        </a>
+                <a href="#"
+                    class="action-btn edit-btn"
+                     data-id="<%= food.getMenuId() %>"
+                     data-name="<%= food.getFoodName() %>"
+                     data-description="<%= food.getDescription() %>"
+                     data-ingredients="<%= food.getIngredients() %>"
+                     data-category="<%= food.getCategoryId() %>"
+                     data-price="<%= food.getPrice() %>"
+                     data-image="<%= food.getImage() %>">
+                             Edit
+                </a>
+                <a href="../food?action=delete&id=<%= food.getMenuId() %>"
+                    class="action-btn delete-btn"
+                     onclick="return confirm('Delete this food item?')">
+                             Delete
+                </a>
 
     </td>
 
@@ -207,29 +211,35 @@ case 6:
         <h2>Add New Food</h2>
 
         <form action="<%= request.getContextPath() %>/food" method="post">
-
+            <input type="hidden" name="menuId" id="menuId">
             <label>Food Name</label>
 
             <input
                 type="text"
                 name="foodName"
+                id="foodName"
                 required>
 
             <label>Description</label>
 
             <textarea
                 rows="3"
-                name="description"></textarea>
+                name="description"
+                id="description">
+            </textarea>
 
             <label>Ingredients</label>
 
             <textarea
                 rows="3"
-                name="ingredients"></textarea>
+                name="ingredients"
+                id="ingredients">
+            </textarea>
 
             <label>Category</label>
 
-            <select name="categoryId">
+            <select name="categoryId"
+            id="categoryId">
 
                 <option value="1">Starters &amp; Salads</option>
                 <option value="2">Pasta &amp; Risotto</option>
@@ -246,6 +256,7 @@ case 6:
                 type="number"
                 step="0.01"
                 name="price"
+                id="price"
                 required>
 
             <label>Image URL</label>
@@ -253,6 +264,7 @@ case 6:
             <input
                 type="text"
                 name="image"
+                id="image"
                 placeholder="images/pizza.jpg">
 
             <button
@@ -304,6 +316,28 @@ window.addEventListener("click", function(event){
         modal.style.display = "none";
 
     }
+
+});
+// Edit Food 
+
+const editButtons = document.querySelectorAll(".edit-btn");
+editButtons.forEach(button => {
+
+    button.addEventListener("click", function(e){
+
+        e.preventDefault();
+
+        modal.style.display = "flex";
+
+        document.getElementById("menuId").value = this.dataset.id;
+        document.getElementById("foodName").value = this.dataset.name;
+        document.getElementById("description").value = this.dataset.description;
+        document.getElementById("ingredients").value = this.dataset.ingredients;
+        document.getElementById("categoryId").value = this.dataset.category;
+        document.getElementById("price").value = this.dataset.price;
+        document.getElementById("image").value = this.dataset.image;
+
+    });
 
 });
 

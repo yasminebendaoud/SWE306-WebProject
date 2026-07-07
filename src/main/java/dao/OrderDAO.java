@@ -7,6 +7,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+import model.DashboardStats;
 import model.Order;
 import model.OrderItem;
 import util.DBConnection;
@@ -118,17 +119,38 @@ public class OrderDAO {
             ResultSet rs = ps.executeQuery();
 
             while (rs.next()) {
-                Order order = new Order();
-                order.setOrderId(rs.getInt("order_id"));
-                order.setUserId(rs.getInt("user_id"));
-                order.setUsername(rs.getString("username"));
-                order.setEmail(rs.getString("email"));
-                order.setPhoneNumber(rs.getString("phone_number"));
-                order.setOrderDate(rs.getTimestamp("order_date"));
-                order.setTotalPrice(rs.getDouble("total_price"));
-                order.setStatus(rs.getString("status"));
+                Order order = buildOrderFromResultSet(rs);
                 order.setItems(getOrderItemsByOrderId(order.getOrderId()));
+                orders.add(order);
+            }
 
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return orders;
+    }
+
+    public List<Order> getRecentOrders(int limit) {
+        List<Order> orders = new ArrayList<Order>();
+
+        String sql = "SELECT o.order_id, o.user_id, u.username, u.email, u.phone_number, " +
+                     "o.order_date, o.total_price, o.status " +
+                     "FROM orders o " +
+                     "JOIN users u ON o.user_id = u.user_id " +
+                     "ORDER BY o.order_date DESC " +
+                     "LIMIT ?";
+
+        try (Connection conn = DBConnection.getConnection();
+             PreparedStatement ps = conn.prepareStatement(sql)) {
+
+            ps.setInt(1, limit);
+
+            ResultSet rs = ps.executeQuery();
+
+            while (rs.next()) {
+                Order order = buildOrderFromResultSet(rs);
+                order.setItems(getOrderItemsByOrderId(order.getOrderId()));
                 orders.add(order);
             }
 
@@ -188,6 +210,81 @@ public class OrderDAO {
         }
 
         return false;
+    }
+
+    public DashboardStats getDashboardStats() {
+        DashboardStats stats = new DashboardStats();
+
+        stats.setTodaysOrders(getCount(
+                "SELECT COUNT(*) FROM orders WHERE DATE(order_date) = CURDATE()"
+        ));
+
+        stats.setPendingOrders(getCount(
+                "SELECT COUNT(*) FROM orders WHERE status = 'Pending'"
+        ));
+
+        stats.setCompletedOrders(getCount(
+                "SELECT COUNT(*) FROM orders WHERE status = 'Completed'"
+        ));
+
+        stats.setRevenueToday(getDouble(
+                "SELECT COALESCE(SUM(total_price), 0) FROM orders WHERE DATE(order_date) = CURDATE()"
+        ));
+
+        return stats;
+    }
+
+    private int getCount(String sql) {
+        int count = 0;
+
+        try (Connection conn = DBConnection.getConnection();
+             PreparedStatement ps = conn.prepareStatement(sql)) {
+
+            ResultSet rs = ps.executeQuery();
+
+            if (rs.next()) {
+                count = rs.getInt(1);
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return count;
+    }
+
+    private double getDouble(String sql) {
+        double value = 0.0;
+
+        try (Connection conn = DBConnection.getConnection();
+             PreparedStatement ps = conn.prepareStatement(sql)) {
+
+            ResultSet rs = ps.executeQuery();
+
+            if (rs.next()) {
+                value = rs.getDouble(1);
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return value;
+    }
+
+    private Order buildOrderFromResultSet(ResultSet rs) throws Exception {
+        Order order = new Order();
+
+        order.setOrderId(rs.getInt("order_id"));
+        order.setUserId(rs.getInt("user_id"));
+        order.setUsername(rs.getString("username"));
+        order.setEmail(rs.getString("email"));
+        order.setPhoneNumber(rs.getString("phone_number"));
+        order.setOrderDate(rs.getTimestamp("order_date"));
+        order.setTotalPrice(rs.getDouble("total_price"));
+        order.setStatus(rs.getString("status"));
+
+        return order;
     }
 
     private double calculateTotal(List<OrderItem> items) {

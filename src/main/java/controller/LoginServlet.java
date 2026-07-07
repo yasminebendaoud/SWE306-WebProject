@@ -64,8 +64,8 @@ public class LoginServlet extends HttpServlet {
 
             if ("admin".equals(user.getRole())) {
 
-                response.sendRedirect(
-                        request.getContextPath() + "/jsp/dashboard.jsp");
+            	response.sendRedirect(
+            	        request.getContextPath() + "/AdminDashboardServlet");
 
             } else {
 

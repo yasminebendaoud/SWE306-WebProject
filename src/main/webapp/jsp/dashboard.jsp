@@ -1,8 +1,18 @@
+<%@ page import="java.util.List" %>
+<%@ page import="model.DashboardStats" %>
+<%@ page import="model.Order" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
 <%
 request.setAttribute("activePage", "dashboard");
+
+DashboardStats stats = (DashboardStats) request.getAttribute("stats");
+List<Order> recentOrders = (List<Order>) request.getAttribute("recentOrders");
+
+if (stats == null) {
+    stats = new DashboardStats();
+}
 %>
 
 <!DOCTYPE html>
@@ -15,7 +25,7 @@ request.setAttribute("activePage", "dashboard");
 
 <title>Admin Dashboard</title>
 
-<link rel="stylesheet" href="../css/admin.css">
+<link rel="stylesheet" href="<%= request.getContextPath() %>/css/admin.css">
 
 </head>
 
@@ -23,81 +33,45 @@ request.setAttribute("activePage", "dashboard");
 
 <div class="admin-layout">
 
-    <!-- ================= Sidebar ================= -->
     <jsp:include page="adminSideBar.jsp" />  
 
-    <!-- ================= Main ================= -->
     <main class="main-content">
 
-        <h1>Dashboard</h1>
-
-        <!-- Quick Actions -->
-        <section class="stats-container">
-
-            <div class="stat-card">
-                <h3>Menu Management</h3>
-                <p>
-                    <a href="<%= request.getContextPath() %>/AdminFoodServlet" class="action-btn">
-                        Manage Menu
-                    </a>
-                </p>
+        <div class="page-header">
+            <div>
+                <h1>Dashboard</h1>
+                <p>Overview of customer orders, revenue, and restaurant activity.</p>
             </div>
 
-            <div class="stat-card">
-                <h3>Customer Orders</h3>
-                <p>
-                    <a href="<%= request.getContextPath() %>/AdminOrderServlet" class="action-btn">
-                        View Orders
-                    </a>
-                </p>
-            </div>
+            <a href="<%= request.getContextPath() %>/AdminFoodServlet" class="action-btn">
+                Manage Menu
+            </a>
+        </div>
 
-            <div class="stat-card">
-                <h3>Website</h3>
-                <p>
-                    <a href="<%= request.getContextPath() %>/jsp/index.jsp" class="action-btn">
-                        Home
-                    </a>
-                </p>
-            </div>
-
-            <div class="stat-card">
-                <h3>Account</h3>
-                <p>
-                    <a href="<%= request.getContextPath() %>/LogoutServlet" class="action-btn">
-                        Logout
-                    </a>
-                </p>
-            </div>
-
-        </section>
-
-        <!-- Statistics -->
         <section class="stats-container">
 
             <div class="stat-card">
                 <h3>Today's Orders</h3>
-                <p>15</p>
+                <p><%= stats.getTodaysOrders() %></p>
             </div>
 
             <div class="stat-card">
                 <h3>Pending Orders</h3>
-                <p>5</p>
+                <p><%= stats.getPendingOrders() %></p>
             </div>
 
             <div class="stat-card">
                 <h3>Completed</h3>
-                <p>10</p>
+                <p><%= stats.getCompletedOrders() %></p>
             </div>
 
             <div class="stat-card">
                 <h3>Revenue Today</h3>
-                <p>RM1200</p>
+                <p>RM<%= String.format("%.2f", stats.getRevenueToday()) %></p>
             </div>
 
         </section>
 
-        <!-- Recent Orders -->
         <section class="recent-orders">
 
             <div class="table-header">
@@ -113,26 +87,53 @@ request.setAttribute("activePage", "dashboard");
             <table>
 
                 <thead>
+
                     <tr>
                         <th>Order ID</th>
                         <th>Customer</th>
                         <th>Status</th>
                         <th>Total</th>
+                        <th>Date</th>
                         <th>Action</th>
                     </tr>
+
                 </thead>
 
                 <tbody>
 
+                <%
+                    if (recentOrders == null || recentOrders.isEmpty()) {
+                %>
+
                     <tr>
-                        <td>#15</td>
-                        <td>Miya</td>
+                        <td colspan="6">No recent orders found.</td>
+                    </tr>
+
+                <%
+                    } else {
+                        for (Order order : recentOrders) {
+                            String statusClass = "pending";
+
+                            if (order.getStatus() != null) {
+                                statusClass = order.getStatus().toLowerCase();
+                            }
+                %>
+
+                    <tr>
+                        <td>#<%= order.getOrderId() %></td>
+
+                        <td><%= order.getUsername() %></td>
+
                         <td>
-                            <span class="status pending">
-                                Pending
+                            <span class="status <%= statusClass %>">
+                                <%= order.getStatus() %>
                             </span>
                         </td>
-                        <td>RM220</td>
+
+                        <td>RM<%= String.format("%.2f", order.getTotalPrice()) %></td>
+
+                        <td><%= order.getOrderDate() %></td>
+
                         <td>
                             <a href="<%= request.getContextPath() %>/AdminOrderServlet" class="action-btn">
                                 View
@@ -140,37 +141,10 @@ request.setAttribute("activePage", "dashboard");
                         </td>
                     </tr>
 
-                    <tr>
-                        <td>#16</td>
-                        <td>Jake</td>
-                        <td>
-                            <span class="status preparing">
-                                Preparing
-                            </span>
-                        </td>
-                        <td>RM95</td>
-                        <td>
-                            <a href="<%= request.getContextPath() %>/AdminOrderServlet" class="action-btn">
-                                View
-                            </a>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>#17</td>
-                        <td>Sarah</td>
-                        <td>
-                            <span class="status completed">
-                                Completed
-                            </span>
-                        </td>
-                        <td>RM310</td>
-                        <td>
-                            <a href="<%= request.getContextPath() %>/AdminOrderServlet" class="action-btn">
-                                View
-                            </a>
-                        </td>
-                    </tr>
+                <%
+                        }
+                    }
+                %>
 
                 </tbody>
 

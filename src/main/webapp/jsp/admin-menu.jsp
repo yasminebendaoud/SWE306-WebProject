@@ -17,7 +17,7 @@ List<Food> foodList = (List<Food>) request.getAttribute("foodList");
 
 <title>Manage Menu</title>
 
-<link rel="stylesheet" href="../css/admin.css">
+<link rel="stylesheet" href="<%= request.getContextPath() %>/css/admin.css">
 
 <style>
 .admin-image {

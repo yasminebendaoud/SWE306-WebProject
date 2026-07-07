@@ -17,7 +17,7 @@ List<Category> categories = (List<Category>) request.getAttribute("categories");
 
 <title>Add Food Item</title>
 
-<link rel="stylesheet" href="../css/admin.css">
+<link rel="stylesheet" href="<%= request.getContextPath() %>/css/admin.css">
 
 <style>
 .admin-form {

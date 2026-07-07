@@ -1618,5 +1618,42 @@ document.addEventListener('DOMContentLoaded', () => {
     MenuDomRouter.init();
 });
 </script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const addButtons = document.querySelectorAll('.btn-add-cart');
+
+    addButtons.forEach(function (button, index) {
+        button.addEventListener('click', function () {
+            const menuId = index + 1;
+
+            const form = document.createElement('form');
+            form.method = 'post';
+            form.action = '<%= request.getContextPath() %>/OrderServlet';
+
+            const actionInput = document.createElement('input');
+            actionInput.type = 'hidden';
+            actionInput.name = 'action';
+            actionInput.value = 'add';
+
+            const menuIdInput = document.createElement('input');
+            menuIdInput.type = 'hidden';
+            menuIdInput.name = 'menu_id';
+            menuIdInput.value = menuId;
+
+            const quantityInput = document.createElement('input');
+            quantityInput.type = 'hidden';
+            quantityInput.name = 'quantity';
+            quantityInput.value = '1';
+
+            form.appendChild(actionInput);
+            form.appendChild(menuIdInput);
+            form.appendChild(quantityInput);
+
+            document.body.appendChild(form);
+            form.submit();
+        });
+    });
+});
+</script>
 
 <jsp:include page="footer.jsp" />

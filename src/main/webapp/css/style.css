@@ -1,0 +1,89 @@
+/*
+   ==========================================
+   Luna e Vino - Global Styles
+   ==========================================
+*/
+
+:root{
+
+    --primary-color:#C65D2E;
+    --dark:#1F1F1F;
+    --background:#F8F6F3;
+    --white:#FFFFFF;
+    --gray:#777777;
+
+}
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+    background:var(--background);
+    color:var(--dark);
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+
+    font-family:'Playfair Display',serif;
+    font-weight:700;
+
+}
+
+a{
+
+    text-decoration:none;
+    color:inherit;
+
+}
+
+img{
+
+    max-width:100%;
+    display:block;
+
+}
+
+.btn-primary{
+
+    background:var(--primary-color);
+    border:none;
+    padding:12px 20px;
+    font-weight:500;
+    transition:.3s;
+
+}
+
+.btn-primary:hover{
+
+    background:#B24F24;
+
+}
+
+.form-control{
+
+    padding:12px;
+    border-radius:10px;
+    border:1px solid #DADADA;
+    margin-bottom:18px;
+
+}
+
+.form-control:focus{
+
+    border-color:var(--primary-color);
+    box-shadow:none;
+
+}

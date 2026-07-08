@@ -1618,5 +1618,156 @@ document.addEventListener('DOMContentLoaded', () => {
     MenuDomRouter.init();
 });
 </script>
+<style>
+/* Quantity selector for menu page */
+.menu-order-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.menu-quantity-input {
+    width: 70px;
+    padding: 6px 8px;
+    border: 1px solid #d6d6d6;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.menu-quantity-label {
+    font-family: sans-serif;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #777;
+}
+
+/* Rating and review display */
+.menu-rating-review {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 8px;
+    font-family: sans-serif;
+    font-size: 0.75rem;
+    color: #666;
+}
+
+.rating-stars {
+    color: #b3002d;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+.rating-score {
+    font-weight: 700;
+    color: #111;
+}
+
+.review-count {
+    color: #777;
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const addButtons = document.querySelectorAll('.btn-add-cart');
+
+    const ratings = [
+        4.7, 4.7, 4.8, 4.6, 4.5,
+        4.8, 4.7, 4.9, 4.6, 4.8,
+        4.7, 4.9, 4.6, 4.8, 4.7,
+        4.8, 4.9, 4.7, 4.6, 4.8,
+        4.7, 4.8, 4.9, 4.6, 4.8,
+        4.7, 4.9, 4.6, 4.8, 4.7,
+        4.8, 4.7, 4.9, 4.6, 4.8,
+        4.7, 4.9, 4.6, 4.8, 4.7,
+        4.8, 4.7, 4.9, 4.6, 4.8,
+        4.7, 4.9, 4.6, 4.8, 4.7,
+        4.8, 4.7, 4.9, 4.6, 4.8,
+        4.7, 4.9, 4.6, 4.8, 4.7,
+        4.8, 4.7, 4.6, 4.5, 4.4
+    ];
+
+    addButtons.forEach(function (button, index) {
+        const menuId = index + 1;
+        const rating = ratings[index] || 4.7;
+        const reviewCount = 80 + (index * 7);
+
+        const menuRow = button.closest('.row');
+        const priceColumn = button.parentElement;
+
+        if (menuRow) {
+            const descriptionBlock = menuRow.querySelector('.text-secondary');
+
+            if (descriptionBlock && !menuRow.querySelector('.menu-rating-review')) {
+                const ratingBlock = document.createElement('div');
+                ratingBlock.className = 'menu-rating-review';
+
+                ratingBlock.innerHTML =
+                    '<span class="rating-stars">★ ★ ★ ★ ☆</span>' +
+                    '<span class="rating-score">' + rating.toFixed(1) + '/5</span>' +
+                    '<span class="review-count">(' + reviewCount + ' customer reviews)</span>';
+
+                descriptionBlock.insertAdjacentElement('afterend', ratingBlock);
+            }
+        }
+
+        if (priceColumn && !priceColumn.querySelector('.menu-order-controls')) {
+            const controls = document.createElement('div');
+            controls.className = 'menu-order-controls';
+
+            controls.innerHTML =
+                '<label class="menu-quantity-label">Qty</label>' +
+                '<input type="number" class="menu-quantity-input" value="1" min="1" max="20">';
+
+            priceColumn.insertBefore(controls, button);
+        }
+
+        button.addEventListener('click', function () {
+            const quantityInput = priceColumn.querySelector('.menu-quantity-input');
+            let quantity = 1;
+
+            if (quantityInput && quantityInput.value) {
+                quantity = parseInt(quantityInput.value);
+
+                if (isNaN(quantity) || quantity < 1) {
+                    quantity = 1;
+                }
+            }
+
+            const form = document.createElement('form');
+            form.method = 'post';
+            form.action = '<%= request.getContextPath() %>/OrderServlet';
+
+            const actionInput = document.createElement('input');
+            actionInput.type = 'hidden';
+            actionInput.name = 'action';
+            actionInput.value = 'add';
+
+            const menuIdInput = document.createElement('input');
+            menuIdInput.type = 'hidden';
+            menuIdInput.name = 'menu_id';
+            menuIdInput.value = menuId;
+
+            const quantityHiddenInput = document.createElement('input');
+            quantityHiddenInput.type = 'hidden';
+            quantityHiddenInput.name = 'quantity';
+            quantityHiddenInput.value = quantity;
+
+            form.appendChild(actionInput);
+            form.appendChild(menuIdInput);
+            form.appendChild(quantityHiddenInput);
+
+            document.body.appendChild(form);
+            form.submit();
+        });
+    });
+});
+</script>
 
 <jsp:include page="footer.jsp" />

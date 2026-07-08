@@ -20,8 +20,7 @@ public class LoginServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        response.sendRedirect("jsp/login.jsp");
-
+        response.sendRedirect(request.getContextPath() + "/jsp/login.jsp");
     }
 
     @Override
@@ -30,6 +29,7 @@ public class LoginServlet extends HttpServlet {
 
         String login = request.getParameter("login");
         String password = request.getParameter("password");
+
         request.setAttribute("login", login);
 
         if (login == null || login.trim().isEmpty()
@@ -44,37 +44,41 @@ public class LoginServlet extends HttpServlet {
         }
 
         UserDAO dao = new UserDAO();
-
         User user = dao.loginUser(login, password);
 
         if (user != null) {
 
             HttpSession session = request.getSession();
 
+            // Existing session attribute used by your project
             session.setAttribute("loggedInUser", user);
 
-            if (user.getRole().equals("admin")) {
+            // Additional attributes used by OrderServlet / cart / checkout
+            session.setAttribute("user", user);
+            session.setAttribute("user_id", user.getUserId());
+            session.setAttribute("userId", user.getUserId());
 
-                response.sendRedirect(
-                        request.getContextPath() + "/jsp/dashboard.jsp");
+            // Useful for JSP pages
+            session.setAttribute("username", user.getUsername());
+            session.setAttribute("role", user.getRole());
+
+            if ("admin".equals(user.getRole())) {
+
+            	response.sendRedirect(
+            	        request.getContextPath() + "/AdminDashboardServlet");
 
             } else {
 
                 response.sendRedirect(
                         request.getContextPath() + "/jsp/index.jsp");
-
             }
 
         } else {
 
-            request.setAttribute("error",
-                    "Invalid username or password.");
+            request.setAttribute("error", "Invalid username or password.");
 
             request.getRequestDispatcher("/jsp/login.jsp")
                    .forward(request, response);
-
         }
-
     }
-
 }

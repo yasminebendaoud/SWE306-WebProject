@@ -120,21 +120,3 @@
     </div>
 
 </footer>
-
-<script>
-
-function footerExpand(item){
-
-    if(window.innerWidth > 768){
-        return;
-    }
-
-    document.querySelectorAll(".footer-item").forEach(function(el){
-        el.classList.remove("active");
-    });
-
-    item.classList.add("active");
-
-}
-
-</script>

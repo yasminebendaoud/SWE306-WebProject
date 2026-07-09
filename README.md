@@ -77,3 +77,11 @@ Email: test@gmail.com
 Password: test123
 
 You can also create your own account using the registration page.
+
+### Troublesshooting
+If some pages does not work, or it is given errors,and inside eclipse please find Problems if it says something like HttpServletRequest cannot be resolved to a type and other problems like this, please do as it written below:
+
+Right click on a project file and go to properties. 
+
+Then find Targeted Runtimes, if there are 2, 1) Apache Tomcat v10.1 2) Apache Tomcat v10.1(whatever number there) just unclick second one and tick first one where there are no numbers in a bracket. 
+Then go to Project and clean , and go to servers right click on Tomcat v10.1 server at localhost and also clean and clean Tomcat Work directory then run the project again 
